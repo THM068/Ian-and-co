@@ -9,7 +9,7 @@
         <label for="description">
             <g:message code="property.description.label" default="Description" />
         </label>
-        <g:textField name="description" value="${propertyInstance?.description}" />
+        <g:textArea  rows="8" cols="10" name="description" value="${propertyInstance?.description}" />
     </div>
     <div class="row">
         <label for="propertyType"><g:message code="property.propertyType.label" default="Property Type" /></label>
@@ -42,7 +42,7 @@
         <g:checkBox name="diningRoom" value="${propertyInstance?.diningRoom}" />
     </div>
      <div class="row">
-        <label for="lounge"><g:message code="property.lounge.label" default="Lounge" /></label>
+        <label for="lounge"><g:message code="property.lounge.label" default="lounge" /></label>
         <g:checkBox name="lounge" value="${propertyInstance?.lounge}" />
     </div>
     <div class="row">

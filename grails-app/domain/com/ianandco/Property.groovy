@@ -18,7 +18,7 @@ class Property {
     boolean garden = false
     Boolean kitchen	= false
     Boolean diningRoom = false
-    Boolean Lounge = false
+    Boolean lounge = false
     Boolean builtInCupboards = false
 
     String floorType

@@ -52,7 +52,21 @@ class SearchService implements InitializingBean {
                 id property.id.toString()
                 source {
                     propertyId = property.id
-
+                    sellingPrice = property?.sellingPrice
+                    title = property?.title
+                    city = property?.city
+                    suburb = property?.suburb
+                    propertyType = property?.propertyType
+                    province = property?.province
+                    numberOfBedrooms = property?.numberOfBedrooms
+                    numberOfBathrooms = property?.numberOfBathrooms
+                    garden = property?.garden
+                    kitchen	= property?.kitchen
+                    diningRoom = property?.diningRoom
+                    lounge = property?.lounge
+                    builtInCupboards = property?.builtInCupboards
+                    floorType = property?.floorType
+                    roofType = property?.roofType
                 }
             }
         }

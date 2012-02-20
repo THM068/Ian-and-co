@@ -25,6 +25,9 @@ modules = {
 
     'cms' {
         resource bundle:'cms-less', url:'/css/cms.less', attrs:[rel: "stylesheet/less", type:'css']
+        resource url: 'css/jquery.cleditor.css'
+        resource url: 'js/jquery.cleditor.js'
+
     }
 
 

@@ -7,6 +7,7 @@
         <meta name="layout" content="cms" />
         <g:set var="entityName" value="${message(code: 'property.label', default: 'Property')}" />
         <title><g:message code="default.create.label" args="[entityName]" /></title>
+        <g:render template="../parts/cms/editorTextArea" />
     </head>
     <body>
         <div class="nav">
