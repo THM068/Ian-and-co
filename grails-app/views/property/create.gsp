@@ -24,7 +24,7 @@
                 <g:renderErrors bean="${propertyInstance}" as="list" />
             </div>
             </g:hasErrors>
-            <g:form action="save" >
+            <g:form controller="property" action="save" >
                 <g:render template="editFields" model="[propertyInstance: propertyInstance]" />
                 <div class="buttons">
                     <span class="button"><g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" /></span>

@@ -43,8 +43,8 @@
                               </a>
                               <ul class="dropdown-menu">
                                   <li>
-                                      <g:link mapping="propertyCreate">Create</g:link>
-                                      <g:link mapping="property">List</g:link>
+                                      <g:link controller="property" action="create">Create</g:link>
+                                      <g:link controller="property" action="list">List</g:link>
                                   </li>
                               </ul>
                           </li>

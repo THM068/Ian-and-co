@@ -79,7 +79,7 @@
         <label for="province">
             <g:message code="property.province.label" default="Province" />
         </label>
-        <g:textField name="province" value="${propertyInstance?.province}" />
+        <g:select from="${propertyInstance?.constraints.province.inList}"  name="province" value="${propertyInstance?.province}" />
     </div>
     <div class="row">
         <label for="suburb">
