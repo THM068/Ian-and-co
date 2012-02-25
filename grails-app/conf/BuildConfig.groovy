@@ -30,8 +30,7 @@ grails.project.dependency.resolution = {
 
         // runtime 'mysql:mysql-connector-java:5.1.13'
         runtime 'postgresql:postgresql:9.1-901-1.jdbc4'
-        runtime 'org.elasticsearch:elasticsearch:0.16.0'
-        runtime 'org.elasticsearch:elasticsearch-lang-groovy:0.16.0'
+
     }
 
     plugins {
@@ -44,7 +43,6 @@ grails.project.dependency.resolution = {
         compile ":lesscss:1.0.0"
 
         runtime ':fixtures:1.1'
-        test ':spock:0.6-SNAPSHOT'
         test ':build-test-data:1.1.1'
     }
 
