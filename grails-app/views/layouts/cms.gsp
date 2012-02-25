@@ -17,7 +17,6 @@
     <r:layoutResources />
     <g:layoutHead />
 
-    <less:stylesheet name="cms" />
     <less:scripts />
 
   </head>
