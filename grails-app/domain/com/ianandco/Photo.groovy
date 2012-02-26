@@ -9,5 +9,6 @@ class Photo {
 
     static constraints = {
         fileName(blank: false, nullable: true)
+        caption(blank: true, nullable: true)
     }
 }

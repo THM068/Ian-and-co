@@ -8,6 +8,10 @@ class PropertyController {
         redirect(action: "list", params: params)
     }
 
+    def upload = {
+        render template: '/property/photoList'
+    }
+
     def list = {
         params.max = Math.min(params.max ? params.int('max') : 10, 100)
         [propertyInstanceList: Property.list(params), propertyInstanceTotal: Property.count()]

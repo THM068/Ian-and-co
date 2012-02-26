@@ -34,7 +34,7 @@ class Property {
 
     static constraints = {
         title(nullable: false,blank: false)
-        description(nullable: true)
+        description(nullable: true, size: 1..2000000)
         city(nullable: true)
         suburb(nullable: true)
         province(inList: ['Bulawayo','Harare','Manicaland ','Mashonaland Central','Mashonaland East','Mashonaland West','Masvingo','Matabeleland North','Matabeleland South','Midlands'])

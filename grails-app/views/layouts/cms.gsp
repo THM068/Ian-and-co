@@ -14,10 +14,10 @@
     <r:use modules="app" />
     <r:use modules="cms" />
     <r:require module="jquery-ui"/>
+    <r:require module="jquery"/>
+
     <r:layoutResources />
     <g:layoutHead />
-
-    <less:scripts />
 
   </head>
 
@@ -31,10 +31,10 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                   </a>
-                  <a class="brand" href="#">Ian & Co</a>
+                  <g:link class="brand" controller="property" action="list">Ian & Co</g:link>
                   <div class="nav-collapse">
                       <ul class="nav">
-                          <li class="active"><a href="#">Home</a></li>
+                          <li class="active"><g:link controller="property" action="list">Home</g:link></li>
                           <li class="dropdown">
                               <a href="#property" class="dropdown-toggle" data-toggle="dropdown">
                                   Property

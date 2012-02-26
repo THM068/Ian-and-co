@@ -57,10 +57,7 @@
         <label for="garden"><g:message code="property.garden.label" default="Garden" /></label>
         <g:checkBox name="garden" value="${propertyInstance?.garden}" />
     </div>
-    <div class="row">
-        <label for="roofType"><g:message code="property.roofType.label" default="Roof Type" /></label>
-        <g:textField name="roofType" value="${propertyInstance?.roofType}" />
-    </div>
+
 
     <div class="row">
         <label for="size"><g:message code="property.size.label" default="Size" /></label>
