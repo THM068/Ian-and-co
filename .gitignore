@@ -1,8 +1,8 @@
 .classpath
-target/*
 .project
 data
 .settings/
 *.iml
 .idea/
-
+out/
+target

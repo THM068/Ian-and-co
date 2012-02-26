@@ -8,6 +8,8 @@
         <g:set var="entityName" value="${message(code: 'property.label', default: 'Property')}" />
         <title><g:message code="default.edit.label" args="[entityName]" /></title>
         <g:render template="../parts/cms/editorTextArea" />
+        <g:render template="uploadPhotoScript" />
+
     </head>
     <body>
         <div class="nav">
@@ -19,10 +21,10 @@
             <p></p>
             <div id="tabs">
                 <ul>
-                    <li><a href="#property">Property</a></li>
-                    <li><a href="#photos" >Photos</a></li>
+                    <li><a href="#property-tab">Property</a></li>
+                    <li><a href="#photos-tab" >Photos</a></li>
                 </ul>
-                    <div id="property">
+                    <div id="property-tab">
                         <h1><g:message code="default.edit.label" args="[entityName]" /></h1>
                         <g:if test="${flash.message}">
                             <div class="message">${flash.message}</div>
@@ -43,7 +45,7 @@
                             </div>
                         </g:form>
                     </div>
-                    <div id="photos">
+                    <div id="photos-tab">
                         <h1>Upolad Photo</h1>
                         <g:render template="photofields" model="[propertyInstance: propertyInstance]" />
                     </div>

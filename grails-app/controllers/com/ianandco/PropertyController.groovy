@@ -1,5 +1,7 @@
 package com.ianandco
 
+import grails.converters.JSON
+
 class PropertyController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
@@ -9,7 +11,25 @@ class PropertyController {
     }
 
     def upload = {
-        render template: '/property/photoList'
+        def photos
+        def property = Property.get(params.long('propertyId'))
+        Photo photo = new Photo(fileName: params.fileName, property: property)
+        if(photo.save()) {
+            property.addToPhotos(photo)
+            property.save()
+            photos = property.photos.collect { p ->
+                [id: p.id, fileName: p.fileName ]
+            }
+            render([success: true, photos: photos] as JSON)
+            return
+        }
+        else {
+            render( [fail: true, errorMessage: 'An error occured , the image was not saved to the database'] as JSON )
+        }
+
+
+
+
     }
 
     def list = {
