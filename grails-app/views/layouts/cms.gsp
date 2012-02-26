@@ -47,17 +47,6 @@
                                   </li>
                               </ul>
                           </li>
-                          <li class="dropdown">
-                              <a href="#contact" class="dropdown-toggle" data-toggle="dropdown">
-                                  Photos
-                                  <b class="caret"></b>
-                              </a>
-                              <ul class="dropdown-menu">
-                                  <li>
-                                      <a href="#">Create</a>
-                                  </li>
-                              </ul>
-                          </li>
                       </ul>
                   </div><!--/.nav-collapse -->
             </div>
