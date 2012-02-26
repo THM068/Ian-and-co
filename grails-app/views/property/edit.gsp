@@ -46,7 +46,7 @@
                         </g:form>
                     </div>
                     <div id="photos-tab">
-                        <h1>Upolad Photo</h1>
+                        <h1>Upload Photo</h1>
                         <g:render template="photofields" model="[propertyInstance: propertyInstance]" />
                     </div>
             </div>
