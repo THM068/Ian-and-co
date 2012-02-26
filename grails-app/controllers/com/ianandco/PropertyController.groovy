@@ -13,10 +13,8 @@ class PropertyController {
     def upload = {
         def photos
         def property = Property.get(params.long('propertyId'))
-        Photo photo = new Photo(fileName: params.fileName, property: property)
-        if(photo.save()) {
-            property.addToPhotos(photo)
-            property.save()
+        Photo photo = new Photo(fileName: params.fileName)
+        if(property.addToPhotos(photo).save()) {
             photos = property.photos.collect { p ->
                 [id: p.id, fileName: p.fileName ]
             }
@@ -26,10 +24,6 @@ class PropertyController {
         else {
             render( [fail: true, errorMessage: 'An error occured , the image was not saved to the database'] as JSON )
         }
-
-
-
-
     }
 
     def list = {

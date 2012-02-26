@@ -6,6 +6,7 @@
     </div>
 </g:form>
 <div id='photoList'>
+    <div id='errors'></div>
     <ul id='photoResults'>
         <g:each in="${propertyInstance.photos}" var="photo">
             <li id="${photo.id}">

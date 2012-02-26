@@ -4,6 +4,9 @@
             uploadPhoto(this);
             return false;
         });
+
+        $( "#photoResults" ).sortable();
+		$( "#photoResults" ).disableSelection();
     });
 
     function uploadPhoto(li) {
@@ -20,7 +23,7 @@
             dataType: 'json',
             success : function(data) {
                 if(data.success) {
-                    $('#fileNameField').empty();
+                    $('#fileNameField').val('');
                     var uploadPhotoList = $('#photoResults');
                     uploadPhotoList.empty();
                     $.each(data.photos, function(i, val) {
@@ -30,6 +33,9 @@
 
                 }
                 else if(data.errorMessage) {
+                    $('#errors').empty();
+                    $('#errors').append(data.errorMessage);
+
 
                 }
             }

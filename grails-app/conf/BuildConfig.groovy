@@ -41,7 +41,7 @@ grails.project.dependency.resolution = {
         runtime ":jquery:1.7.1"
         compile ":jquery-ui:1.8.15"
         compile ":lesscss:1.0.0"
-
+        test ':spock 0.5-groovy-1.7'
         runtime ':fixtures:1.1'
         test ':build-test-data:1.1.1'
     }

@@ -29,7 +29,7 @@ class Property {
     String description
     boolean active = false
     boolean editorChoice = false
-    List photos
+    List photos = []
 
     static hasMany = [photos: Photo ]
 
