@@ -26,6 +26,17 @@ class PropertyController {
         }
     }
 
+    def sortPhotos = {
+        def photoIds =  params.'item[]'
+        def photos = photoIds.collect { Photo.get(it) }
+        def property = photos[0].property
+
+        if(property.photos.id != photos.id ) {
+            property.photos = photos
+            property.save()
+        }
+    }
+
     def list = {
         params.max = Math.min(params.max ? params.int('max') : 10, 100)
         [propertyInstanceList: Property.list(params), propertyInstanceTotal: Property.count()]

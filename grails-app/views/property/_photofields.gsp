@@ -9,7 +9,7 @@
     <div id='errors'></div>
     <ul id='photoResults'>
         <g:each in="${propertyInstance.photos}" var="photo">
-            <li id="${photo.id}">
+            <li id="item_${photo.id}">
                 <img src="${photo.fileName}" width="200" height="200" />
             </li>
         </g:each>

@@ -5,9 +5,17 @@
             return false;
         });
 
-        $( "#photoResults" ).sortable();
-		$( "#photoResults" ).disableSelection();
-    });
+        $( "#photoResults" ).sortable({
+                stop:function(event, ui) {
+                    $.ajax({
+                        type: "GET",
+                        url: "/property/sortPhotos",
+                        data: $("#photoResults").sortable("serialize")
+                    });
+                }
+            });
+	        $( "#photoResults" ).disableSelection();
+        });
 
     function uploadPhoto(li) {
 
