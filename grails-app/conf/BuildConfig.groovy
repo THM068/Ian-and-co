@@ -37,11 +37,11 @@ grails.project.dependency.resolution = {
         runtime ":resources:1.1.6"
         compile ':heroku:1.0'
         compile ':cloud-support:1.0.8'
-
+        test ':spock 0.5-groovy-1.7'
         runtime ":jquery:1.7.1"
         compile ":jquery-ui:1.8.15"
         compile ":lesscss:1.0.0"
-        test ':spock 0.5-groovy-1.7'
+
         runtime ':fixtures:1.1'
         test ':build-test-data:1.1.1'
     }
