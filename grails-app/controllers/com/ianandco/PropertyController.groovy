@@ -30,11 +30,11 @@ class PropertyController {
         def photoIds =  params.'item[]'
         def photos = photoIds.collect { Photo.get(it) }
         def property = photos[0].property
-
         if(property.photos.id != photos.id ) {
             property.photos = photos
             property.save()
         }
+        render ([success: true] as JSON )
     }
 
     def list = {

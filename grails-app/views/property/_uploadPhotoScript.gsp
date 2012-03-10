@@ -9,7 +9,7 @@
                 stop:function(event, ui) {
                     $.ajax({
                         type: "GET",
-                        url: "/property/sortPhotos",
+                        url: "${createLink(controller: 'property', action: 'sortPhotos')}",
                         data: $("#photoResults").sortable("serialize")
                     });
                 }

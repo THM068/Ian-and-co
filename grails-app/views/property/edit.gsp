@@ -1,5 +1,3 @@
-
-
 <%@ page import="com.ianandco.Property" %>
 <html>
     <head>
