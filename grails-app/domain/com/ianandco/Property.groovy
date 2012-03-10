@@ -9,7 +9,6 @@ class Property {
 
     String city
     String suburb
-    String propertyType
     String province
 
     Integer numberOfBedrooms = 0
@@ -21,15 +20,13 @@ class Property {
     Boolean lounge = false
     Boolean builtInCupboards = false
 
-    String floorType
-    String roofType
     String size
 
     String title
     String description
     boolean active = false
     boolean editorChoice = false
-    List photos = []
+    List photos
 
     static hasMany = [photos: Photo ]
 
@@ -39,8 +36,6 @@ class Property {
         city(nullable: true)
         suburb(nullable: true)
         province(inList: ['Bulawayo','Harare','Manicaland ','Mashonaland Central','Mashonaland East','Mashonaland West','Masvingo','Matabeleland North','Matabeleland South','Midlands'])
-        floorType(nullable: true)
-        roofType(nullable: true)
         size(nullable: true)
     }
 

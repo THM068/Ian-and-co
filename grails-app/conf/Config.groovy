@@ -48,6 +48,9 @@ grails.logging.jul.usebridge = true
 // packages to include in Spring bean scanning
 grails.spring.bean.packages = []
 
+grails.plugin.databasemigration.updateOnStart = true
+grails.plugin.databasemigration.updateOnStartFileNames = ['changelog.groovy']
+
 // request parameters to mask when logging exceptions
 grails.exceptionresolver.params.exclude = ['password']
 grails.app.context="/"

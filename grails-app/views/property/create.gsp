@@ -1,5 +1,3 @@
-
-
 <%@ page import="com.ianandco.Property" %>
 <html>
     <head>
@@ -16,6 +14,7 @@
         </div>
         <div class="body">
             <h1><g:message code="default.create.label" args="[entityName]" /></h1>
+            Photos can only be added after creating a property.
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>

@@ -35,6 +35,13 @@
                             <td valign="top" class="value">${fieldValue(bean: propertyInstance, field: "title")}</td>
                             
                         </tr>
+
+                        <tr class="prop">
+                            <td valign="top" class="name"><g:message code="property.description.label" default="Description" /></td>
+
+                            <td valign="top" class="value">${fieldValue(bean: propertyInstance, field: "description")}</td>
+
+                        </tr>
                     
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="property.city.label" default="City" /></td>
@@ -54,20 +61,6 @@
                             <td valign="top" class="name"><g:message code="property.province.label" default="Province" /></td>
                             
                             <td valign="top" class="value">${fieldValue(bean: propertyInstance, field: "province")}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="property.floorType.label" default="Floor Type" /></td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean: propertyInstance, field: "floorType")}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="property.roofType.label" default="Roof Type" /></td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean: propertyInstance, field: "roofType")}</td>
                             
                         </tr>
                     
@@ -172,13 +165,6 @@
                                 </g:each>
                                 </ul>
                             </td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="property.propertyType.label" default="Property Type" /></td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean: propertyInstance, field: "propertyType")}</td>
                             
                         </tr>
                     

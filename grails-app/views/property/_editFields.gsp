@@ -11,10 +11,7 @@
         </label>
         <g:textArea  rows="8" cols="10" name="description" value="${propertyInstance?.description}" />
     </div>
-    <div class="row">
-        <label for="propertyType"><g:message code="property.propertyType.label" default="Property Type" /></label>
-        <g:textField name="propertyType" value="${propertyInstance?.propertyType}" />
-    </div>
+
     <div class="row">
         <label for="numberOfBathrooms"><g:message code="property.numberOfBathrooms.label" default="Number Of Bathrooms" /></label>
         <g:textField name="numberOfBathrooms" value="${fieldValue(bean: propertyInstance, field: 'numberOfBathrooms')}" />
@@ -23,18 +20,6 @@
     <div class="row">
         <label for="numberOfBedrooms"><g:message code="property.numberOfBedrooms.label" default="Number Of Bedrooms" /></label>
         <g:textField name="numberOfBedrooms" value="${fieldValue(bean: propertyInstance, field: 'numberOfBedrooms')}" />
-    </div>
-    <div class="row">
-        <label for="floorType">
-            <g:message code="property.floorType.label" default="Floor Type" />
-        </label>
-        <g:textField name="floorType" value="${propertyInstance?.floorType}" />
-    </div>
-    <div class="row">
-        <label for="roofType">
-            <g:message code="property.roofType.label" default="Roof Type" />
-        </label>
-        <g:textField name="roofType" value="${propertyInstance?.roofType}" />
     </div>
 
      <div class="row">
@@ -63,8 +48,6 @@
         <label for="size"><g:message code="property.size.label" default="Size" /></label>
         <g:textField name="size" value="${propertyInstance?.size}" />
     </div>
-
-
 
     <div class="row">
         <label for="city">
