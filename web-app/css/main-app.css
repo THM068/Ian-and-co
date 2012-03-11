@@ -1,0 +1,99 @@
+body {
+    color: #777777;
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+#header {
+    height: 100px;
+}
+
+#header #logo {
+    width: 250px;
+    height: 50px;
+    color: #ffffff;
+    background: #000;
+}
+
+#header-nav {
+    float: right;
+}
+
+#header-nav .nav-pills .active > a, #header-nav .nav-pills .active > a:hover {
+    background-color: #852432;
+    color: #FFFFFF;
+}
+
+#header-nav ul.nav li a {
+    color: #852432;
+    display: block;
+}
+
+#header-nav .nav-pills > li > a  {
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+}
+
+#header-nav .nav-tabs > li > a, .nav-pills > li > a {
+    line-height: 14px;
+    margin-right: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#address-bar {
+    height: 40px;
+    background-image: url("../images/search_bg.jpg");
+    background-repeat: repeat-x;
+    color: #852432;
+    font-size: 12px;
+    padding: 10px 20px;
+
+}
+
+#main-image-container {
+    height: 314px;
+    margin: 40px 0 0;
+    width: 100%;
+    background: url("../images/header_intro_bg.jpg") repeat-x scroll center bottom #3C69AC;
+    border-left: 1px solid #4E79BB;
+    border-right: 1px solid #3C69AC;
+}
+
+#main-image-container #home-image {
+    float: left;
+}
+
+#main-image-container #homeintro {
+    float: left;
+    height: 276px;
+    padding: 19px;
+    width: 270px;
+}
+
+#homeintro {
+    color: #999999;
+}
+#homeintro h1 {
+    color: #FFFFFF;
+    font-size: 28px;
+    line-height: 30px;
+}
+#homeintro p {
+    margin-top: 20px;
+    line-height: 24px;
+
+}
+ #homeintro a#btnleft , #homeintro a#btnright {
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    padding: 6px 6px;
+    color: #fff;
+    background-color: #852432;
+}
+.clear {
+    clear: both;
+}

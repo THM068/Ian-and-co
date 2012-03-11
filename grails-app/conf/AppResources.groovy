@@ -1,5 +1,10 @@
 modules = {
-     'app' {
+    'main-app' {
+        defaultBundle 'core'
+        resource url: 'css/main-app.css'
+    }
+
+    'app' {
         defaultBundle 'core'
         dependsOn 'bootstrap'
     }
