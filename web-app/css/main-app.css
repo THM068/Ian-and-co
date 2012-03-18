@@ -94,6 +94,48 @@ body {
     color: #fff;
     background-color: #852432;
 }
+#home-welcome {
+    float: left;
+    width: 300px;
+}
+#home-welcome h5 {
+    font-family: Geneva;
+    color: #852432;
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-top: 10px
+}
+
+#new-listings {
+    float: left;
+    width: 300px;
+    margin-left: 30px;
+}
+
+#new-listings em {
+    font-size: 15px;
+    font-style: inherit;
+    font-weight: normal;
+}
+#new-listings hr {
+    margin: 0;
+}
+#new-listings img {
+    width: 40%;
+    height: 40%;
+}
+
+#feature-listing {
+    float: left;
+
+}
 .clear {
     clear: both;
+}
+#footer {
+    background: url("../images/footer_bg.jpg") repeat-x scroll center top transparent;
+    border-top: 1px solid #CFCFCF;
+    float: left;
+    margin: 30px 0 0;
+    width: 100%;
 }

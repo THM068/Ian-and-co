@@ -3,6 +3,7 @@ package com.ianandco
 import grails.converters.JSON
 
 class PropertyController {
+    def propertyService
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
@@ -51,6 +52,9 @@ class PropertyController {
     def save = {
         def propertyInstance = new Property(params)
         if (propertyInstance.save(flush: true)) {
+            if(params.editorChoice) {
+                propertyService.editorsChoice(propertyInstance)
+            }
             flash.message = "${message(code: 'default.created.message', args: [message(code: 'property.label', default: 'Property'), propertyInstance.id])}"
             redirect(action: "show", id: propertyInstance.id)
         }
@@ -95,6 +99,9 @@ class PropertyController {
             }
             propertyInstance.properties = params
             if (!propertyInstance.hasErrors() && propertyInstance.save(flush: true)) {
+                if(params.editorChoice) {
+                    propertyService.editorsChoice(propertyInstance)
+                }
                 flash.message = "${message(code: 'default.updated.message', args: [message(code: 'property.label', default: 'Property'), propertyInstance.id])}"
                 redirect(action: "show", id: propertyInstance.id)
             }

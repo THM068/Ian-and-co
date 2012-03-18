@@ -28,6 +28,9 @@ class Property {
     boolean editorChoice = false
     List photos
 
+    Date dateCreated
+    Date lastUpdated
+
     static hasMany = [photos: Photo ]
 
     static constraints = {
@@ -37,6 +40,14 @@ class Property {
         suburb(nullable: true)
         province(inList: ['Bulawayo','Harare','Manicaland ','Mashonaland Central','Mashonaland East','Mashonaland West','Masvingo','Matabeleland North','Matabeleland South','Midlands'])
         size(nullable: true)
+    }
+
+    static namedQueries = {
+        newListings {
+            eq 'active', true
+            maxResults(3)
+            order("dateCreated", "desc")
+        }
     }
 
 }

@@ -45,8 +45,11 @@ environments {
     }
     test {
         dataSource {
-            dbCreate = "update"
-            url = "jdbc:hsqldb:mem:testDb"
+            url = 'jdbc:mysql://localhost:3306/ianandco?autoReconnect=true'
+            //logSql = true
+            properties {
+                validationQuery = "SELECT 1"
+            }
         }
     }
     production {
