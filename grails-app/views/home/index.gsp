@@ -1,5 +1,6 @@
 <%@ page import="com.ianandco.Property" %>
 <g:set var="newListing" value="${Property.newListings.list()}" />
+<g:set var="editorChoice" value="${Property.findByActiveAndEditorChoice(true,true)}" />
 <html>
 <head>
     <title>Welcome to Ian and Co - Real Estate</title>
@@ -45,9 +46,16 @@
                 </g:each>
                 </ul>
             </g:if>
-
         </div>
-        <div id="feature-listing"></div>
+        <div id="feature-listing">
+            <p></p>
+            <em>FEATURED LISTINGS</em>
+            <ul>
+                <li>
+                    <img src="${editorChoice.photos[0].fileName}" />
+                </li>
+            </ul>
+        </div>
     </div>
     <div class="clear"></div>
     %{--<g:if test="${Property.list().size() > 0}">--}%
