@@ -50,8 +50,8 @@
         <div id="feature-listing">
             <p></p>
             <em>FEATURED LISTINGS</em>
-            <g:set var="fileName" value="${editorChoice?.photos[0]?.fileName}" />
-            <g:if test="${fileName !=null}">
+            <g:set var="fileName" value="${editorChoice?.photos ? editorChoice?.photos[0]?.fileName : ''}" />
+            <g:if test="${fileName != '' }">
                  <ul>
                     <li>
                         <img src="${fileName}" />
