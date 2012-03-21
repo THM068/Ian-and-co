@@ -125,6 +125,9 @@ body {
     height: 40%;
 }
 
+#feature-listing hr {
+    margin: 0;
+}
 #feature-listing {
     float: left;
     width: 300px;
@@ -132,7 +135,10 @@ body {
 }
 #feature-listing img {
     width: 290px;
+}
 
+#feature-listing ul, #new-listings ul  {
+    list-style: none;
 }
 .clear {
     clear: both;
