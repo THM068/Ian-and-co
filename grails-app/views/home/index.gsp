@@ -38,12 +38,12 @@
             <hr>
             <g:if test="${newListing.size() > 0}">
                 <ul>
-                <g:each in="${newListing}" var="property">
-                <li>
-                    <img src="${property.photos[0].fileName}" height="30" height="30">
-                    Title: ${property.title}
-                </li>
-                </g:each>
+                    <g:each in="${newListing}" var="property">
+                        <li>
+                            <img src="${property?.photos[0]?.fileName}" height="30" height="30">
+                            Title: ${property?.title}
+                        </li>
+                    </g:each>
                 </ul>
             </g:if>
         </div>
