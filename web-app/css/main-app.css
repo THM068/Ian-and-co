@@ -9,6 +9,7 @@ body {
 
 #header #logo {
     position: absolute;
+    margin-top: 5px;
 }
 
 #header-nav {
