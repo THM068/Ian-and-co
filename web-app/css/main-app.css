@@ -8,11 +8,12 @@ body {
 }
 
 #header #logo {
-    float: left;
+    position: absolute;
 }
 
 #header-nav {
     float: right;
+    margin-top: 60px;
 }
 
 #header-nav .nav-pills .active > a, #header-nav .nav-pills .active > a:hover {
