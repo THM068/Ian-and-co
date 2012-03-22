@@ -25,7 +25,7 @@
     <div class="clear"></div>
     <div id="address-bar">
         <p>
-            Browse Online or Call Us on - (888) 555-4689
+            Browse Online or Call Us on - (+2639) 886626 (+2639) 886256
         </p>
     </div>
     <div class="clear"></div>
