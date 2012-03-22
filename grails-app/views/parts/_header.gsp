@@ -1,7 +1,8 @@
 <div id="header">
     <div id="logo">
-        IAN and CO Real Estate   &nbsp;&nbsp;
+        <img src="${resource(dir:'images', file:'logo.jpg')}" width="250" height="50"/>
     </div>
+    <div class="clear"></div>
     <div id="header-nav">
         <ul class="nav nav-pills">
             <li class="active">

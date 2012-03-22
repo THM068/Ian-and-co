@@ -8,10 +8,7 @@ body {
 }
 
 #header #logo {
-    width: 250px;
-    height: 50px;
-    color: #ffffff;
-    background: #000;
+    float: left;
 }
 
 #header-nav {
