@@ -25,7 +25,7 @@
             <h5>We offer a full line of Real Estate Services</h5>
 
             <p>
-                Pellentesque rhoncus. Donec consectetuer, neque nec volutpat sodales, risus tortor eleifend libero, vitae porta diam sapien non orci. Nulla mollis ligula in tortor.
+                Can you provide the copy of the text to display in this paragraph
             </p>
 
             <p>
