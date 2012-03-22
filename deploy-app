@@ -1,4 +1,5 @@
 #!/bin/bash
+grails clean
 grails war
 rm -fr /var/lib/tomcat6/webapps/ianandco /var/lib/tomcat6/webapps/ianandco.war
 mv target/ianandco.war   /var/lib/tomcat6/webapps
