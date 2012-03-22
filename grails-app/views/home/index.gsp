@@ -28,9 +28,6 @@
                 Can you provide the copy of the text to display in this paragraph
             </p>
 
-            <p>
-                Suspendisse potenti. Aenean sem justo, mollis sed, malesuada vitae, viverra eu, metus. Aliquam massa justo, rutrum at, tincidunt vel, bibendum vitae, quam. Aliquam nec ante.
-            </p>
         </div>
         <div id="new-listings">
             <p></p>
