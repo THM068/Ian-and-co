@@ -22,27 +22,6 @@
         <g:textField name="numberOfBedrooms" value="${fieldValue(bean: propertyInstance, field: 'numberOfBedrooms')}" />
     </div>
 
-     <div class="row">
-        <label for="diningRoom"><g:message code="property.diningRoom.label" default="Dining Room" /></label>
-        <g:checkBox name="diningRoom" value="${propertyInstance?.diningRoom}" />
-    </div>
-     <div class="row">
-        <label for="lounge"><g:message code="property.lounge.label" default="lounge" /></label>
-        <g:checkBox name="lounge" value="${propertyInstance?.lounge}" />
-    </div>
-    <div class="row">
-        <label for="builtInCupboards"><g:message code="property.builtInCupboards.label" default="Built In Cupboards" /></label>
-        <g:checkBox name="builtInCupboards" value="${propertyInstance?.builtInCupboards}" />
-    </div>
-    <div class="row">
-        <label for="kitchen"><g:message code="property.kitchen.label" default="Kitchen" /></label>
-        <g:checkBox name="kitchen" value="${propertyInstance?.kitchen}" />
-    </div>
-    <div class="row">
-        <label for="garden"><g:message code="property.garden.label" default="Garden" /></label>
-        <g:checkBox name="garden" value="${propertyInstance?.garden}" />
-    </div>
-
 
     <div class="row">
         <label for="size"><g:message code="property.size.label" default="Size" /></label>

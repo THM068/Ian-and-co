@@ -70,20 +70,7 @@
                             <td valign="top" class="value">${fieldValue(bean: propertyInstance, field: "size")}</td>
                             
                         </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="property.active.label" default="Active" /></td>
-                            
-                            <td valign="top" class="value"><g:formatBoolean boolean="${propertyInstance?.active}" /></td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="property.builtInCupboards.label" default="Built In Cupboards" /></td>
-                            
-                            <td valign="top" class="value"><g:formatBoolean boolean="${propertyInstance?.builtInCupboards}" /></td>
-                            
-                        </tr>
+
                     
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="property.depositPercentage.label" default="Deposit Percentage" /></td>
@@ -92,26 +79,7 @@
                             
                         </tr>
                     
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="property.diningRoom.label" default="Dining Room" /></td>
-                            
-                            <td valign="top" class="value"><g:formatBoolean boolean="${propertyInstance?.diningRoom}" /></td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="property.editorChoice.label" default="Editor Choice" /></td>
-                            
-                            <td valign="top" class="value"><g:formatBoolean boolean="${propertyInstance?.editorChoice}" /></td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="property.garden.label" default="Garden" /></td>
-                            
-                            <td valign="top" class="value"><g:formatBoolean boolean="${propertyInstance?.garden}" /></td>
-                            
-                        </tr>
+
                     
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="property.interestRate.label" default="Interest Rate" /></td>
@@ -121,23 +89,9 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="property.kitchen.label" default="Kitchen" /></td>
-                            
-                            <td valign="top" class="value"><g:formatBoolean boolean="${propertyInstance?.kitchen}" /></td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
                             <td valign="top" class="name"><g:message code="property.loanTerm.label" default="Loan Term" /></td>
                             
                             <td valign="top" class="value">${fieldValue(bean: propertyInstance, field: "loanTerm")}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="property.lounge.label" default="Lounge" /></td>
-                            
-                            <td valign="top" class="value"><g:formatBoolean boolean="${propertyInstance?.lounge}" /></td>
                             
                         </tr>
                     
@@ -173,6 +127,20 @@
                             
                             <td valign="top" class="value">${fieldValue(bean: propertyInstance, field: "sellingPrice")}</td>
                             
+                        </tr>
+
+                        <tr class="prop">
+                            <td valign="top" class="name"><g:message code="property.active.label" default="Active" /></td>
+
+                            <td valign="top" class="value"><g:formatBoolean boolean="${propertyInstance?.active}" /></td>
+
+                        </tr>
+
+                         <tr class="prop">
+                            <td valign="top" class="name"><g:message code="property.editorChoice.label" default="Editor Choice" /></td>
+
+                            <td valign="top" class="value"><g:formatBoolean boolean="${propertyInstance?.editorChoice}" /></td>
+
                         </tr>
                     
                     </tbody>

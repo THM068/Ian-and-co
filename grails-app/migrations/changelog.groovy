@@ -4,4 +4,8 @@ databaseChangeLog = {
 
 
 	include file: '20121803-added-date-created-to-property.groovy'
+
+	include file: 'added-property-type-to-property.groovy'
+
+	include file: 'removed-some-boolean-values.groovy'
 }

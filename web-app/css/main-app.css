@@ -111,10 +111,13 @@ body {
     margin-left: 30px;
 }
 
-#new-listings em, #feature-listing em  {
-    font-size: 15px;
-    font-style: inherit;
-    font-weight: normal;
+#new-listings h2, #feature-listing h2  {
+    border-bottom: 1px solid #4F4840;
+    color: #4F4840;
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
 }
 #new-listings hr {
     margin: 0;
@@ -122,6 +125,15 @@ body {
 #new-listings img {
     width: 40%;
     height: 40%;
+    float: left;
+}
+
+#new-listings .new-listing-content {
+    float: left;
+    margin-left: 5px;
+}
+#new-listings li {
+    margin-bottom: 5px;
 }
 
 #feature-listing hr {
@@ -131,13 +143,31 @@ body {
     float: left;
     width: 300px;
     margin-left: 8px;
+
+}
+
+#feature-listing li {
+    line-height: 8px;
 }
 #feature-listing img {
     width: 290px;
+    border: 1px solid #CCCCCC;
+}
+#feature-listing-content {
+    width: 290px;
+    border: 1px solid #CCCCCC;
+}
+
+#feature-listing-content p.top{
+    width: 290px;
+    background-color: #F7E0C8;
+    height: 40px;
+    margin-top: 0;
 }
 
 #feature-listing ul, #new-listings ul  {
     list-style: none;
+    margin-left: 0;
 }
 .clear {
     clear: both;

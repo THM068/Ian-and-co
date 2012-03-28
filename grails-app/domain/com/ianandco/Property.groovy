@@ -14,16 +14,11 @@ class Property {
     Integer numberOfBedrooms = 0
     Integer numberOfBathrooms = 0
 
-    boolean garden = false
-    Boolean kitchen	= false
-    Boolean diningRoom = false
-    Boolean lounge = false
-    Boolean builtInCupboards = false
-
     String size
 
     String title
     String description
+    String propertyType
     boolean active = false
     boolean editorChoice = false
     List photos
@@ -40,6 +35,7 @@ class Property {
         suburb(nullable: true)
         province(inList: ['Bulawayo','Harare','Manicaland ','Mashonaland Central','Mashonaland East','Mashonaland West','Masvingo','Matabeleland North','Matabeleland South','Midlands'])
         size(nullable: true)
+        propertyType(nullable: true, inList: ['Residential','Commercial'])
     }
 
     static namedQueries = {

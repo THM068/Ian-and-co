@@ -31,14 +31,19 @@
         </div>
         <div id="new-listings">
             <p></p>
-            <em>NEW LISTINGS</em>
+            <h2>NEW LISTINGS</h2>
             <hr>
             <g:if test="${newListing.size() > 0}">
                 <ul>
                     <g:each in="${newListing}" var="property">
                         <li>
                             <img src="${property?.photos[0]?.fileName}" height="30" height="30">
-                            Title: ${property?.title}
+                            <div class="new-listing-content">
+                                <p>${property?.title}</p>
+                                <p>Price</p>
+                                <p>Bath room</p>
+                            </div>
+                            <div class="clear"></div>
                         </li>
                     </g:each>
                 </ul>
@@ -46,13 +51,22 @@
         </div>
         <div id="feature-listing">
             <p></p>
-            <em>FEATURED LISTINGS</em>
+            <h2>FEATURED LISTINGS</h2>
             <hr>
             <g:set var="fileName" value="${editorChoice?.photos ? editorChoice?.photos[0]?.fileName : ''}" />
             <g:if test="${fileName != '' }">
                  <ul>
                     <li>
-                        <img src="${fileName}" />
+                        <img src="${fileName}" width="290" height="150" />
+                        <div id="feature-listing-content">
+                            <p class="top"></p>
+                            <p class="bottom">$789,000
+
+3 Bed, 4 Bath, 4,582 Sq Ft on 0.45 Acres
+
+Property Type: Single Family Home</p>
+
+                        </div>
                     </li>
                 </ul>
             </g:if>
