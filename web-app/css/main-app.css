@@ -3,9 +3,6 @@ body {
     font-family: Arial,Helvetica,sans-serif;
 }
 
-#header {
-    height: 100px;
-}
 
 #header #logo {
     position: absolute;
@@ -18,7 +15,7 @@ body {
 }
 
 #header-nav .nav-pills .active > a, #header-nav .nav-pills .active > a:hover {
-    background-color: #852432;
+    background-color: #cb7145;
     color: #FFFFFF;
 }
 
@@ -54,7 +51,7 @@ body {
 
 #main-image-container {
     height: 314px;
-    margin: 40px 0 0;
+    margin: 2px 0 0;
     width: 100%;
     background: url("../images/header_intro_bg.jpg") repeat-x scroll center bottom #3C69AC;
     border-left: 1px solid #4E79BB;
