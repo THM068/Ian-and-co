@@ -47,6 +47,9 @@
                                   </li>
                               </ul>
                           </li>
+                          <li>
+                              <g:link uri="/">Public site</g:link>
+                          </li>
                       </ul>
                   </div><!--/.nav-collapse -->
             </div>
