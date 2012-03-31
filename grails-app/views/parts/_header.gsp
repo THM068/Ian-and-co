@@ -1,6 +1,6 @@
 <div id="header" >
     <div id="logo">
-        <img src="${resource(dir:'images', file:'logo.jpg')}" width="250" height="50"/>
+        <img src="${resource(dir:'images', file:'logo.jpg')}" />
     </div>
     <div class="clear"></div>
     <div id="header-nav">
@@ -29,6 +29,4 @@
         </p>
     </div>
     <div class="clear"></div>
-
-
 </div>

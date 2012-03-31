@@ -3,7 +3,6 @@ body {
     font-family: Arial,Helvetica,sans-serif;
 }
 
-
 #header #logo {
     position: absolute;
     margin-top: 5px;
@@ -46,6 +45,7 @@ body {
     color: #852432;
     font-size: 12px;
     padding: 10px 20px;
+    margin-top: 12px;
 
 }
 
