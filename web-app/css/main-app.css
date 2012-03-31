@@ -43,7 +43,7 @@ body {
 }
 
 #address-bar {
-    height: 40px;
+    height: 20px;
     background-image: url("../images/search_bg.jpg");
     background-repeat: repeat-x;
     color: #852432;
@@ -178,4 +178,8 @@ body {
     float: left;
     margin: 30px 0 0;
     width: 100%;
+}
+
+.main-container {
+    margin-top: 45px;
 }
