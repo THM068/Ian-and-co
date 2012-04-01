@@ -8,4 +8,6 @@ databaseChangeLog = {
 	include file: 'added-property-type-to-property.groovy'
 
 	include file: 'removed-some-boolean-values.groovy'
+
+	include file: 'added-a-tigerbox.groovy'
 }

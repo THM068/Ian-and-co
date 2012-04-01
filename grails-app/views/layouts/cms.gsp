@@ -47,6 +47,19 @@
                                   </li>
                               </ul>
                           </li>
+                          <li class="dropdown">
+                              <a href="#property" class="dropdown-toggle" data-toggle="dropdown">
+                                  Slide Show
+                                  <b class="caret"></b>
+                              </a>
+                              <ul class="dropdown-menu">
+                                  <li>
+                                      <g:link controller="tigerBox" action="create">Create</g:link>
+                                      <g:link controller="tigerBox" action="list">List</g:link>
+                                  </li>
+                              </ul>
+
+                          </li>
                           <li>
                               <g:link uri="/">Public site</g:link>
                           </li>

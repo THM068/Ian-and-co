@@ -2,6 +2,7 @@ modules = {
     'main-app' {
         defaultBundle 'core'
         resource url: 'css/main-app.css'
+        resource url: 'js/galleria.min.js'
     }
 
     'app' {
