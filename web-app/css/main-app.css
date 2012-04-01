@@ -177,6 +177,12 @@ body {
     width: 100%;
 }
 
-.main-container {
-    margin-top: 45px;
+#sidebar {
+    float: left;
+    width: 309px;
+    height: 600px;
+    padding: 19px 0 19px 19px;
+    border-left: 1px solid #3c69ac;
+    border-right: 1px solid #4e79bb;
+    background: url(../images/sidebar.jpg) repeat-x #204782 bottom;
 }

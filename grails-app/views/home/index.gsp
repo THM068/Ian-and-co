@@ -1,6 +1,5 @@
 <%@ page import="com.ianandco.Property" %>
-<g:set var="newListing" value="${Property.newListings.list()}" />
-<g:set var="editorChoice" value="${Property.findByActiveAndEditorChoice(true,true)}" />
+
 <html>
 <head>
     <title>Welcome to Ian and Co - Real Estate</title>

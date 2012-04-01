@@ -6,6 +6,12 @@
         <g:textField name="title" value="${propertyInstance?.title}" />
     </div>
     <div class="row">
+        <label for="province">
+            <g:message code="property.propertyType.label" default="Type" />
+        </label>
+        <g:select from="${propertyInstance?.constraints.propertyType.inList}"  name="propertyType" value="${propertyInstance?.propertyType}" />
+    </div>
+    <div class="row">
         <label for="description">
             <g:message code="property.description.label" default="Description" />
         </label>
