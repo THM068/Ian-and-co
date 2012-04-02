@@ -1,8 +1,9 @@
 modules = {
     'main-app' {
         defaultBundle 'core'
+        dependsOn 'jquery', 'jquery-ui'
         resource url: 'css/main-app.css'
-        resource url: 'js/galleria.min.js'
+        resource url: 'js/galleria-1.2.6.min.js'
     }
 
     'app' {

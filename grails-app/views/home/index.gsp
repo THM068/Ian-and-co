@@ -4,12 +4,16 @@
 <head>
     <title>Welcome to Ian and Co - Real Estate</title>
     <meta name="layout" content="main"/>
+
 </head>
 
 <body>
     <div id="main-image-container" class="span-12">
         <div id='home-image'>
-            <img src="${resource(dir: 'images', file: 'header_home_img.jpg')}" alt="" />
+            <img src="https://s3.amazonaws.com/ian-co-images/header_home_img.jpg" />
+            <img src="http://www.leapfin.co.uk/ianandco/slides/house1.jpg" />
+            <img src="http://www.leapfin.co.uk/ianandco/slides/house2.jpg" />
+
         </div>
         <div id="homeintro">
             <h1>Start your Search</h1>
@@ -72,6 +76,22 @@ Property Type: Single Family Home</p>
         </div>
     </div>
     <div class="clear"></div>
+    <script src="https://s3.amazonaws.com/ian-co-images/galleria-1.2.6.min.js"  ></script>
+    <script>
+    $(function() {
+
+        Galleria.loadTheme('${ g.resource( dir:'themes/classic/', file:'galleria.classic.min.js' )}');
+        $("#home-image").galleria({
+            width: 630,
+            height: 300,
+            autoplay: 5000,
+            debug: false,
+            showInfo: true,
+            thumbnails: false
+        });
+    });
+</script>
+
 
 </body>
 </html>

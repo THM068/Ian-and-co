@@ -50,7 +50,7 @@ body {
 }
 
 #main-image-container {
-    height: 314px;
+    height: 255px;
     margin: 2px 0 0;
     width: 100%;
     background: url("../images/header_intro_bg.jpg") repeat-x scroll center bottom #3C69AC;
@@ -60,10 +60,11 @@ body {
 
 #main-image-container #home-image {
     float: left;
+    width: 630px;
 }
 
 #main-image-container #homeintro {
-    float: left;
+    float: right;
     height: 276px;
     padding: 19px;
     width: 270px;
@@ -186,3 +187,12 @@ body {
     border-right: 1px solid #4e79bb;
     background: url(../images/sidebar.jpg) repeat-x #204782 bottom;
 }
+
+.galleria-container {
+  background: none repeat scroll 0 0 transparent;
+}
+.galleria-counter {
+    color: transparent;
+}
+
+
