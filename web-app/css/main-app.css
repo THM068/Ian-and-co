@@ -64,7 +64,7 @@ body {
 }
 
 #main-image-container #homeintro {
-    float: right;
+    float: left;
     height: 276px;
     padding: 19px;
     width: 270px;
