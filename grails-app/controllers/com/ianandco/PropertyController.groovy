@@ -15,7 +15,8 @@ class PropertyController {
         def photos
         def property = Property.get(params.long('propertyId'))
         Photo photo = new Photo(fileName: params.fileName)
-        if(property.addToPhotos(photo).save()) {
+        if(property?.addToPhotos(photo)?.save()) {
+            photo.save()
             photos = property.photos.collect { p ->
                 [id: p.id, fileName: p.fileName ]
             }
@@ -36,6 +37,22 @@ class PropertyController {
             property.save()
         }
         render ([success: true] as JSON )
+    }
+
+    def removePhoto = {
+        def photo = Photo.get(params.long('photoId'))
+        if(photo){
+            def property = photo.property
+            property.removeFromPhotos(photo)
+            property.save()
+
+            photo.delete(failOnError: true)
+            redirect(action: 'edit', id: property.id)
+            return
+        }
+        else {
+            redirect(action: 'list')
+        }
     }
 
     def list = {

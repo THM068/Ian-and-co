@@ -49,6 +49,46 @@ class PropertyControllerSpec extends ControllerSpec {
 
         where:
             file = 'file/name'
+    }
+
+    def 'An image can be deleted from the property'(){
+        given:
+            Property property = new Property(id: 3)
+            Photo photo = new Photo(id: 1, property: property)
+            property.photos = [photo]
+
+            mockDomain Photo, [photo]
+            mockDomain Property, [property]
+
+        and:
+            controller.params.photoId = 1
+
+        when:
+            controller.removePhoto()
+
+
+        then:
+            def updatedProperty = Property.list().first()
+            updatedProperty.photos.size() == 0
+        and:
+            Photo.list().size() == 0
+        and:
+            controller.redirectArgs.action == 'edit'
+        and:
+            controller.redirectArgs.id == 3
+    }
+
+    def 'An error message is displayed when a photo that does not exist is deleted'() {
+        given:
+            mockDomain Photo
+        and:
+            controller.params.photoId = 3
+
+        when:
+            controller.removePhoto()
+
+        then:
+            controller.redirectArgs.action == 'list'
 
     }
 }

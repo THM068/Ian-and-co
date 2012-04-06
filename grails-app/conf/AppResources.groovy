@@ -34,6 +34,7 @@ modules = {
         resource url:'/css/cms.css'
         resource url: 'css/jquery.cleditor.css'
         resource url: 'js/jquery.cleditor.js'
+        resource url: 'js/cms.js'
 
     }
 

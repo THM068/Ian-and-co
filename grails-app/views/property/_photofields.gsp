@@ -11,6 +11,8 @@
         <g:each in="${propertyInstance.photos}" var="photo">
             <li id="item_${photo.id}">
                 <img src="${photo.fileName}" width="200" height="200" />
+                <g:link controller="property" action="removePhoto" params="[photoId: photo.id]">Delete</g:link>
+
             </li>
         </g:each>
 

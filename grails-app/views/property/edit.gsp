@@ -52,7 +52,7 @@
         <r:script>
             $(function() {
                     $( "#tabs" ).tabs();
-                });
+            });
         </r:script>
     </body>
 </html>
