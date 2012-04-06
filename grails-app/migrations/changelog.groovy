@@ -10,4 +10,6 @@ databaseChangeLog = {
 	include file: 'removed-some-boolean-values.groovy'
 
 	include file: 'added-a-tigerbox.groovy'
+
+	include file: 'added-photo-string-tigerbox.groovy'
 }

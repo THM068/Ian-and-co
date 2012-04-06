@@ -3,7 +3,7 @@ package com.ianandco
 class TigerBox {
 
     Page page
-    static hasMany = [photos: Photo]
+    static hasMany = [photos: String]
 
     static constraints = {
         page(nullable: true)
