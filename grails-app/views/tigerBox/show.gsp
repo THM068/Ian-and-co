@@ -1,5 +1,4 @@
 
-
 <%@ page import="com.ianandco.TigerBox" %>
 <html>
     <head>
@@ -15,48 +14,42 @@
             <span class="menuButton"><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></span>
         </div>
         <div class="body">
-            <h1><g:message code="default.show.label" args="[entityName]" /></h1>
+            <h1>Slide Show</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
-            <div class="dialog">
-                <table>
-                    <tbody>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="tigerBox.id.label" default="Id" /></td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean: tigerBoxInstance, field: "id")}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="tigerBox.page.label" default="Page" /></td>
-                            
-                            <td valign="top" class="value">${tigerBoxInstance?.page?.encodeAsHTML()}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="tigerBox.photos.label" default="Photos" /></td>
-                            
-                            <td valign="top" style="text-align: left;" class="value">
-                                <ul>
-                                <g:each in="${tigerBoxInstance.photos}" var="p">
-                                    <li><g:link controller="photo" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></li>
-                                </g:each>
-                                </ul>
-                            </td>
-                            
-                        </tr>
-                    
-                    </tbody>
-                </table>
-            </div>
+            <g:if test="${flash.error}">
+            <div class="errors">${flash.error}</div>
+            </g:if>
+
+            <table>
+                <tbody>
+                    <tr class="prop">
+                        <td valign="top" class="name"><g:message code="tigerBox.page.label" default="Page"/></td>
+
+                        <td valign="top" class="value">${tigerBoxInstance?.page?.encodeAsHTML()}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Add a Photo</h3>
+            <g:form action="addPhoto" controller="tigerBox">
+                <g:hiddenField name="tigerBoxId" value="${tigerBoxInstance.id}" />
+                <g:textField name="fileName" style="width: 500px;"/>
+                <g:submitButton name="submit" value="Submit"  />
+            </g:form>
+
+            <br>
+            <g:if test="${tigerBoxInstance?.photos?.size() > 0}">
+                <g:each in="${tigerBoxInstance.photos}" var="p">
+                    <img src="${p}" width="100" height="100"/>
+                    <g:link action="removePhoto" controller="tigerBox" params="[tigerBoxId: tigerBoxInstance.id, fileName: p]" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');">Delete</g:link>
+                    <br/>
+                </g:each>
+            </g:if>
             <div class="buttons">
                 <g:form>
                     <g:hiddenField name="id" value="${tigerBoxInstance?.id}" />
-                    <span class="button"><g:actionSubmit class="edit" action="edit" value="${message(code: 'default.button.edit.label', default: 'Edit')}" /></span>
                     <span class="button"><g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" /></span>
                 </g:form>
             </div>
