@@ -31,10 +31,10 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                   </a>
-                  <g:link class="brand" controller="property" action="list">Ian & Co</g:link>
+                  <g:link class="brand" mapping="listProperty">Ian & Co</g:link>
                   <div class="nav-collapse">
                       <ul class="nav">
-                          <li class="active"><g:link controller="property" action="list">Home</g:link></li>
+                          <li class="active"><g:link mapping="listProperty">Home</g:link></li>
                           <li class="dropdown">
                               <a href="#property" class="dropdown-toggle" data-toggle="dropdown">
                                   Property
@@ -42,8 +42,8 @@
                               </a>
                               <ul class="dropdown-menu">
                                   <li>
-                                      <g:link controller="property" action="create">Create</g:link>
-                                      <g:link controller="property" action="list">List</g:link>
+                                      <g:link mapping="createProperty">Create</g:link>
+                                      <g:link mapping="listProperty">List</g:link>
                                   </li>
                               </ul>
                           </li>
@@ -54,11 +54,14 @@
                               </a>
                               <ul class="dropdown-menu">
                                   <li>
-                                      <g:link controller="tigerBox" action="create">Create</g:link>
-                                      <g:link controller="tigerBox" action="list">List</g:link>
+                                      <g:link mapping="createSlides">Create</g:link>
+                                      <g:link mapping="listSlides">List</g:link>
                                   </li>
                               </ul>
 
+                          </li>
+                          <li>
+                              <g:link mapping="locations">Locations</g:link>
                           </li>
                           <li>
                               <g:link uri="/">Public site</g:link>

@@ -1,5 +1,7 @@
 package com.ianandco
 
+import org.grails.taggable.Taggable
+
 class Property {
 
     BigDecimal sellingPrice = 0
@@ -7,8 +9,7 @@ class Property {
     Float depositPercentage = 0.0
     Float interestRate = 0.0
 
-    String city
-    String suburb
+    String location
     String province
 
     Integer numberOfBedrooms = 0
@@ -31,8 +32,7 @@ class Property {
     static constraints = {
         title(nullable: false,blank: false)
         description(nullable: true, size: 1..2000000)
-        city(nullable: true)
-        suburb(nullable: true)
+        location(nullable: true)
         province(inList: ['Bulawayo','Harare','Manicaland ','Mashonaland Central','Mashonaland East','Mashonaland West','Masvingo','Matabeleland North','Matabeleland South','Midlands'])
         size(nullable: true)
         propertyType(nullable: true, inList: ['Residential','Commercial'])
