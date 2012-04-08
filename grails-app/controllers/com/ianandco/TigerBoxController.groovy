@@ -2,10 +2,46 @@ package com.ianandco
 
 class TigerBoxController {
 
-    static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
-
     def index = {
         redirect(action: "list", params: params)
+    }
+
+    def addPhoto = {
+        def tigerBox = TigerBox.get(params.long('tigerBoxId'))
+        if(tigerBox) {
+            def fileName = params.fileName
+            if(fileName) {
+                tigerBox.addToPhotos(fileName).save()
+                flash.message = 'Photo added to slide show'
+                redirect(action: 'show', id: tigerBox.id)
+                return
+            }
+            else {
+                flash.message = 'Photo not added to slide show'
+                redirect(action: 'show', id: tigerBox.id)
+            }
+        }
+
+    }
+
+    def removePhoto = {
+        def tigerBox = TigerBox.get(params.long('tigerBoxId'))
+        if(tigerBox) {
+            def fileName = params.fileName
+            if(fileName) {
+                tigerBox.removeFromPhotos(fileName).save()
+                flash.message = 'Photo removed from slide show'
+                redirect(action: 'show', id: tigerBox.id)
+                return
+            }
+            else {
+                flash.message = 'Photo not removed from slide show'
+                redirect(action: 'show', id: tigerBox.id)
+                return
+            }
+        }
+        flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'tigerBox.label', default: 'TigerBox'), params.tigerBoxId])}"
+        redirect(action: 'list')
     }
 
     def list = {
