@@ -1,6 +1,8 @@
 package com.ianandco
 
-class Property {
+import org.grails.taggable.Taggable
+
+class Property implements Taggable {
 
     BigDecimal sellingPrice = 0
     Integer loanTerm = 0

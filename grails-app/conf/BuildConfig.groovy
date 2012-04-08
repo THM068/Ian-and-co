@@ -36,13 +36,16 @@ grails.project.dependency.resolution = {
 
     plugins {
         runtime ":resources:1.1.6"
+        runtime ":jquery:1.7.1"
+        runtime ':fixtures:1.1'
+
         compile ':heroku:1.0'
         compile ':cloud-support:1.0.8'
-        runtime ":jquery:1.7.1"
+        compile ":taggable:1.0.1"
         compile ":jquery-ui:1.8.15"
         compile ":lesscss:1.0.0"
 
-        runtime ':fixtures:1.1'
+
         test ':build-test-data:1.1.1'
 
     }
