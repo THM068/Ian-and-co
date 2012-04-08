@@ -1,4 +1,5 @@
-<%@ page import="com.ianandco.Property" %>
+<%@ page import="com.ianandco.TigerBox; com.ianandco.Page; com.ianandco.Property" %>
+<g:set var="tigerBox" value="${TigerBox.findByPage(Page.HOME)}" />
 
 <html>
 <head>
@@ -10,10 +11,16 @@
 <body>
     <div id="main-image-container" class="span-12">
         <div id='home-image'>
-            <img src="https://s3.amazonaws.com/ian-co-images/header_home_img.jpg" />
-            <img src="http://www.leapfin.co.uk/ianandco/slides/house1.jpg" />
-            <img src="http://www.leapfin.co.uk/ianandco/slides/house2.jpg" />
-
+            <g:if test="${tigerBox?.photos?.size() > 0}">
+                <g:each in="${tigerBox?.photos}" var="p">
+                    <img src="${p}" />
+                </g:each>
+            </g:if>
+            <g:else>
+                <img src="https://s3.amazonaws.com/ian-co-images/header_home_img.jpg" />
+            </g:else>
+            %{--<img src="http://www.leapfin.co.uk/ianandco/slides/house1.jpg" />--}%
+            %{--<img src="http://www.leapfin.co.uk/ianandco/slides/house2.jpg" />--}%
         </div>
         <div id="homeintro">
             <h1>Start your Search</h1>
