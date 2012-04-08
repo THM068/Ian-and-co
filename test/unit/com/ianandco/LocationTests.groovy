@@ -2,7 +2,7 @@ package com.ianandco
 
 import grails.test.*
 
-class NeighbourhoodTests extends GrailsUnitTestCase {
+class LocationTests extends GrailsUnitTestCase {
     protected void setUp() {
         super.setUp()
     }

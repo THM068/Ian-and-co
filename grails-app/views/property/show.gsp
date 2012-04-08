@@ -44,16 +44,9 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="property.city.label" default="City" /></td>
+                            <td valign="top" class="name"><g:message code="property.location.label" default="Location" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: propertyInstance, field: "city")}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="property.suburb.label" default="Suburb" /></td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean: propertyInstance, field: "suburb")}</td>
+                            <td valign="top" class="value">${fieldValue(bean: propertyInstance, field: "location")}</td>
                             
                         </tr>
                     

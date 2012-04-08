@@ -1,9 +1,13 @@
 package com.ianandco
 
-class Neighbourhood {
+class Location {
     String name
 
     static constraints = {
         name(unique: true, nullable: true)
+    }
+
+    String toString() {
+        return name
     }
 }

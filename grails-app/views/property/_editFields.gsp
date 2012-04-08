@@ -1,3 +1,4 @@
+<%@ page import="com.ianandco.Location" %>
 <div class="form-container">
     <div class="row">
         <label for="title">
@@ -35,22 +36,16 @@
     </div>
 
     <div class="row">
-        <label for="city">
-            <g:message code="property.city.label" default="City" />
+        <label for="location">
+            <g:message code="property.location.label" default="Location" />
         </label>
-        <g:textField name="city" value="${propertyInstance?.city}" />
+        <g:select name="location" from="${Location.list()}" value="${propertyInstance?.location}" optionKey="name" noSelection="['':'-Please select a location-']"/>
     </div>
     <div class="row">
         <label for="province">
             <g:message code="property.province.label" default="Province" />
         </label>
         <g:select from="${propertyInstance?.constraints.province.inList}"  name="province" value="${propertyInstance?.province}" />
-    </div>
-    <div class="row">
-        <label for="suburb">
-            <g:message code="property.suburb.label" default="Suburb" />
-        </label>
-        <g:textField name="suburb" value="${propertyInstance?.suburb}" />
     </div>
 
     <div class="row">

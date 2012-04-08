@@ -28,9 +28,7 @@
                         
                             <g:sortableColumn property="description" title="${message(code: 'property.description.label', default: 'Description')}" />
                         
-                            <g:sortableColumn property="city" title="${message(code: 'property.city.label', default: 'City')}" />
-                        
-                            <g:sortableColumn property="suburb" title="${message(code: 'property.suburb.label', default: 'Suburb')}" />
+                            <g:sortableColumn property="city" title="${message(code: 'property.location', default: 'Location')}" />
                         
                             <g:sortableColumn property="province" title="${message(code: 'property.province.label', default: 'Province')}" />
                         
@@ -46,9 +44,7 @@
                         
                             <td>${fieldValue(bean: propertyInstance, field: "description")}</td>
                         
-                            <td>${fieldValue(bean: propertyInstance, field: "city")}</td>
-                        
-                            <td>${fieldValue(bean: propertyInstance, field: "suburb")}</td>
+                            <td>${fieldValue(bean: propertyInstance, field: "location")}</td>
                         
                             <td>${fieldValue(bean: propertyInstance, field: "province")}</td>
                         
