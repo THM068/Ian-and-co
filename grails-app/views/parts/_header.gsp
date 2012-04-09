@@ -1,6 +1,6 @@
 <div id="header" >
     <div id="logo">
-        <img src="${resource(dir:'images', file:'logo.jpg')}" />
+        <g:link uri="/"><img src="${resource(dir:'images', file:'logo.jpg')}" /></g:link>
     </div>
     <div class="clear"></div>
     <div id="header-nav">
