@@ -47,18 +47,8 @@
                                   </li>
                               </ul>
                           </li>
-                          <li class="dropdown">
-                              <a href="#property" class="dropdown-toggle" data-toggle="dropdown">
-                                  Slide Show
-                                  <b class="caret"></b>
-                              </a>
-                              <ul class="dropdown-menu">
-                                  <li>
-                                      <g:link mapping="createSlides">Create</g:link>
-                                      <g:link mapping="listSlides">List</g:link>
-                                  </li>
-                              </ul>
-
+                          <li >
+                              <g:link mapping="listSlides" >Slide Show</g:link>
                           </li>
                           <li>
                               <g:link mapping="locations">Locations</g:link>
