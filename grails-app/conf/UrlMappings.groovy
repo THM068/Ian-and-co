@@ -10,6 +10,7 @@ class UrlMappings {
         name home: "/"(controller: 'home', action: 'index')
         name contactUs: "/contact-us"(controller: 'home', action: 'contactUs')
         name aboutUs: "/about-us"(controller: 'home', action: 'aboutUs')
+        name resProperty: "/residential-properties"(controller: 'home', action: 'residentialProperties')
 
         //cms mappings
         name locations: "/locations"(controller: 'location', action: 'create')
@@ -20,6 +21,8 @@ class UrlMappings {
         name createProperty: "/create-property"(controller: 'property', action: 'create')
         name listProperty: "/list-property"(controller: 'property', action: 'list')
 
-		"500"(view:'/error')
+		"500"(view: '/error')
+        "404"(controller: 'error', action: 'error_404')
+
 	}
 }

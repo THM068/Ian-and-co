@@ -8,8 +8,8 @@
             <li class="${actionName == 'index'? 'active':''}">
                 <g:link uri="/">Home</g:link>
             </li>
-            <li>
-                <a href="#">Residential properties</a>
+            <li class="${actionName == 'residentialProperties'? 'active':''}">
+                <g:link mapping="resProperty">Residential properties</g:link>
             </li>
             <li>
                 <a href="${actionName == 'contactUs' ? 'active':''}">Commercial properties</a>

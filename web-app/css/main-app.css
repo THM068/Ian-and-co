@@ -64,7 +64,7 @@ body {
 }
 
 #main-image-container #homeintro {
-    float: right;
+    float: left;
     height: 276px;
     padding: 19px;
     width: 270px;
@@ -178,21 +178,148 @@ body {
     width: 100%;
 }
 
-#sidebar {
-    float: left;
-    width: 309px;
-    height: 600px;
-    padding: 19px 0 19px 19px;
-    border-left: 1px solid #3c69ac;
-    border-right: 1px solid #4e79bb;
-    background: url(../images/sidebar.jpg) repeat-x #204782 bottom;
-}
-
 .galleria-container {
   background: none repeat scroll 0 0 transparent;
 }
 .galleria-counter {
     color: transparent;
 }
+
+#listingwrap {
+    float: left;
+    /*width: 960px;*/
+    background: url(../images/listing_bg.jpg) repeat-y;
+}
+
+#sidebar {
+    float: left;
+    width: 309px;
+    padding: 19px 0 19px 19px;
+    border-left: 1px solid #3c69ac;
+    border-right: 1px solid #4e79bb;
+    background: url(../images/header_intro_bg.jpg) repeat-x #204782 bottom;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    margin: 0 0 9px 0;
+}
+
+#sidebar ul li {
+    text-align: left;
+}
+
+#sidebar ul li a {
+    display: block;
+    padding: 5px 0 5px 0;
+    width: 309px;
+    color: #999999;
+    background: url(../images/subnav_item_bg.jpg) no-repeat bottom;
+}
+
+#sidebar ul li a:hover {
+    color: #cccccc;
+}
+
+#sidebar ul li.currentsub a {
+    color: #ffffff;
+    background: url(../images/subnav_current_bg.jpg) repeat-y;
+}
+
+.search-header {
+    color: #FFFFFF;
+}
+
+.searchresult {
+    float: right;
+    margin: 20px 0 0 23px;
+    width: 816px;
+    background: url(../images/search_result_description_bg.jpg) repeat-x bottom;
+}
+
+.searchresult img {
+    float: left;
+    height: 195px;
+    width: 281px;
+}
+
+.listinginfo {
+    float: left;
+}
+
+.listinginfo .address {
+    width: 493px;
+}
+
+.listinginfo .price {
+    font-size: 18px;
+}
+
+.mls {
+    color: #999999;
+}
+
+#searchnav {
+    float: right;
+    width: 610px;
+    margin: 20px 0 0 0;
+}
+
+#searchnav a#btnleft, #searchnav a#btnright {
+    display: block;
+    width: 145px;
+    height: 27px;
+    text-align: center;
+    padding: 3px 0 0 0;
+}
+
+#searchnav a#btnleft {
+    float: left;
+    background: url(../images/searchnav_btnleft.jpg) no-repeat;
+}
+
+#searchnav a#btnright {
+    float: right;
+    background: url(../images/searchnav_btnright.jpg) no-repeat;
+}
+
+.address {
+    padding: 10px 20px 8px 20px;
+    background-color: #f7e0c8;
+    border-bottom: 1px solid #ebd0b4;
+    margin: 0 0 10px 0;
+}
+
+#featuredlisting .price, #featuredlisting .bedbathsqft, #featuredlisting .propertytype, .listinginfo .price, .listinginfo .bedbathsqft, .listinginfo .propertytype, .listinginfo .mls {
+    margin: 0 0 0 20px;
+}
+
+a:link {
+    color: #4f4840;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #4f4840;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #7f7467;
+    text-decoration: none;
+}
+
+a:active {
+    color: #4f4840;
+    text-decoration: none;
+}
+
+.message {
+    float: right;
+    margin: 20px 0 0 23px;
+    width: 816px;
+}
+
+
 
 
