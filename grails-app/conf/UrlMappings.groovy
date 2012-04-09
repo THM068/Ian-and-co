@@ -11,6 +11,7 @@ class UrlMappings {
         name contactUs: "/contact-us"(controller: 'home', action: 'contactUs')
         name aboutUs: "/about-us"(controller: 'home', action: 'aboutUs')
         name resProperty: "/residential-properties"(controller: 'home', action: 'residentialProperties')
+        name comProperty: "/commercial-properties"(controller: 'home', action: 'commercialProperties')
 
         //cms mappings
         name locations: "/locations"(controller: 'location', action: 'create')

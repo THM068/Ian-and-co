@@ -26,7 +26,7 @@
             <h1>Start your Search</h1>
             <p>Whether you’re looking to buy a new home or rent/buy a commercial property, we have you covered. Let us help you find your property today.</p>
             <g:link mapping="resProperty" elementId="btnleft" >Residential</g:link>
-            <a id="btnright" href="#">Commercial</a>
+            <g:link mapping="comProperty" elementId="btnright" >Commercial</g:link>
         </div>
     </div>
 

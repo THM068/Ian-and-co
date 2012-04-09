@@ -11,8 +11,8 @@
             <li class="${actionName == 'residentialProperties'? 'active':''}">
                 <g:link mapping="resProperty">Residential properties</g:link>
             </li>
-            <li>
-                <a href="${actionName == 'contactUs' ? 'active':''}">Commercial properties</a>
+            <li class="${actionName == 'commercialProperties'? 'active':''}">
+                <g:link mapping="comProperty" >Commercial</g:link>
             </li>
             <li class="${actionName == 'aboutUs'? 'active':''}">
                 <g:link mapping="aboutUs">About Us</g:link>

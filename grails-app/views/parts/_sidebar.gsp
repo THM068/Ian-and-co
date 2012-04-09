@@ -3,7 +3,6 @@
     <ul>
         <li class="${actionName == 'residentialProperties' ? 'currentsub' : ''}"><g:link controller="home"
                                                                                          action="residentialProperties">Residential Properties</g:link></li>
-        <li class=""><a href="#">Commercial Properties</a></li>
-        <li><a href="search_results.html">Multi-Family Home</a></li>
+        <li class="${actionName == 'commercialProperties' ? 'currentsub' : ''}"><g:link mapping="comProperty" >Commercial Properties</g:link></li>
     </ul>
 </div>
