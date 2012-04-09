@@ -8,7 +8,7 @@
       <g:render template="../parts/sidebar" />
       <div class="message">Sorry, We couldn't find what you're looking for.
           <p>
-              We couldn't find what you're looking for.It seems that the page you were trying to reach doesn't exist anymore, or maybe it has just moved.
+              It seems that the page you were trying to reach doesn't exist anymore, or maybe it has just moved.
           </p>
 
           <p>
