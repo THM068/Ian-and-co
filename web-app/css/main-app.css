@@ -320,6 +320,22 @@ a:active {
     width: 816px;
 }
 
+#listingdetail {
+    float: left;
+    margin-left: 345px;
+    width: 805px;
+}
+
+#listingdetail p {
+    margin-bottom: 10px;
+}
+
+#listingdetail h4 {
+    color: #696969;
+    margin: 20px 0 0;
+    text-transform: capitalize;
+}
+
 
 
 
