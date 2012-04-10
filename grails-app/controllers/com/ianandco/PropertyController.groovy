@@ -27,6 +27,22 @@ class PropertyController {
         }
     }
 
+    def removePhoto = {
+        def photo = Photo.get(params.long('photoId'))
+        if(photo){
+            def property = photo.property
+            property.removeFromPhotos(photo)
+            property.save()
+
+            photo.delete(failOnError: true)
+            redirect(action: 'edit', id: property.id)
+            return
+        }
+        else {
+            redirect(action: 'list')
+        }
+    }
+
     def sortPhotos = {
         def photoIds =  params.'item[]'
         def photos = photoIds.collect { Photo.get(it) }
