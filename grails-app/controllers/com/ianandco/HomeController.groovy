@@ -30,4 +30,22 @@ class HomeController {
         [propertyInstanceList: comProperties, propertyInstanceTotal: comPropertiesCount]
 
     }
+
+    def locationProperties = {
+        params.max = Math.min(params.max ? params.int('max') : 10, 100)
+        def properties = []
+        def propertiesCount = 0
+        def location = params.location
+
+        if(!location) {
+            properties = Property.findAllByActive(true,params)
+            propertiesCount = Property.countByActive(true)
+        }
+        else {
+            properties = Property.findAllByLocationAndActive(location, true, params)
+            propertiesCount = Property.countByLocationAndActive(location,true)
+        }
+
+        [propertyInstanceList: properties, propertyInstanceTotal: propertiesCount, location: location]
+    }
 }
