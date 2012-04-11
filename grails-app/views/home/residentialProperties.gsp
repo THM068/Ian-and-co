@@ -12,6 +12,11 @@
       <g:else>
           <div class="message"> Sorry, there are no residential properties at the moment.</div>
       </g:else>
+      <div class="clear"></div>
+
+      <div class="paginate">
+          <g:paginate controller="home" action="residentialProperties" total="${propertyInstanceTotal}"/>
+      </div>
   </div>
   </body>
 </html>

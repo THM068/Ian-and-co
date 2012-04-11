@@ -336,6 +336,31 @@ a:active {
     text-transform: capitalize;
 }
 
+.paginate {
+    float:right;
+    margin-right:450px;
+    margin-top:10px
+}
+
+.paginate a {
+    margin: 0 5px;
+}
+
+.paginate .currentStep {
+    background: #CB7145;
+    padding: 2px 5px;
+    color: #FFFFFF;
+}
+
+.paginate .step {
+    padding: 2px 5px;
+    background: #ffa07a;
+    color: white;
+}
+
+a.nextLink, a.prevLink {
+    color: navy;
+}
 
 
 
