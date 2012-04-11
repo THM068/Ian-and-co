@@ -48,4 +48,8 @@ class HomeController {
 
         [propertyInstanceList: properties, propertyInstanceTotal: propertiesCount, location: location]
     }
+
+    def propertyDetails = {
+
+    }
 }

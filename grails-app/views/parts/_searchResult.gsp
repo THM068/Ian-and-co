@@ -10,7 +10,7 @@
 
     <div class="listinginfo">
         <div class="address">
-            <h3><a href="listing_detail.html">${property?.title}.</a></h3>
+            <h3><g:link controller="home" action="propertyDetails" id="${property.id}">${property?.title}.</g:link></h3>
 
             <p class="location">${property?.location}</p>
         </div>

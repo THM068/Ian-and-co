@@ -7,11 +7,11 @@
         <li class="${actionName == 'commercialProperties' ? 'currentsub' : ''}"><g:link mapping="comProperty" >Commercial Properties</g:link></li>
         <li><p></p></li>
         <li>
-            <form>
+            <g:form controller="home" action="locationProperties">
                 <span style="color: #fff; font-weight: bold; font-size: 12px">Search By location</span> <br />
                 <g:select name="location" from="${Location?.list()}" value="${location}" optionKey="name" noSelection="['':'-Please select a location-']"/>
                 <input type="submit" value="Search">
-            </form>
+            </g:form>
         </li>
     </ul>
 </div>
