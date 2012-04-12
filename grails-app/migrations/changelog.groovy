@@ -14,4 +14,6 @@ databaseChangeLog = {
 	include file: '20120407-add-a-location-field-to-property.groovy'
 
 	include file: '20120307-add-a-tigerbox.groovy'
+
+	include file: '20120412-added-spring-security-domain-classes.groovy'
 }

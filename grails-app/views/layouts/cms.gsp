@@ -56,6 +56,12 @@
                           <li>
                               <g:link uri="/">Public site</g:link>
                           </li>
+                          <sec:ifLoggedIn>
+                              <li>
+                                  <g:link mapping="signout">Sign out</g:link>
+                              </li>
+                          </sec:ifLoggedIn>
+
                       </ul>
                   </div><!--/.nav-collapse -->
             </div>

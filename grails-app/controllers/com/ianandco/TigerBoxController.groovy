@@ -1,5 +1,9 @@
 package com.ianandco
 
+import grails.plugins.springsecurity.Secured
+
+//@Secured(["hasRole('ROLE_ADMIN')"])
+ @Secured(['IS_AUTHENTICATED_FULLY'])
 class TigerBoxController {
 
     def index = {

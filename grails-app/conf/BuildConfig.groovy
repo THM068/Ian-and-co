@@ -45,6 +45,7 @@ grails.project.dependency.resolution = {
         compile ":taggable:1.0.1"
         compile ":jquery-ui:1.8.15"
         compile ":lesscss:1.0.0"
+        compile ":spring-security-core:1.2.7.3"
 
 
         test ':build-test-data:1.1.1'

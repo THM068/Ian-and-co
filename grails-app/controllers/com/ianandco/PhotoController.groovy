@@ -1,5 +1,9 @@
 package com.ianandco
 
+import grails.plugins.springsecurity.Secured
+
+//@Secured(["hasRole('ROLE_ADMIN')"])
+ @Secured(['IS_AUTHENTICATED_FULLY'])
 class PhotoController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]

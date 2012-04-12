@@ -26,5 +26,8 @@ class UrlMappings {
 		"500"(view: '/error')
         "404"(controller: 'error', action: 'error_404')
 
+        "/login/$action?"(controller: "login")
+        name signout: "/logout/$action?"(controller: "logout")
+
 	}
 }

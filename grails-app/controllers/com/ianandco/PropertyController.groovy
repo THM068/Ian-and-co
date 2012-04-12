@@ -1,16 +1,21 @@
 package com.ianandco
 
 import grails.converters.JSON
+import grails.plugins.springsecurity.Secured;
 
+ //@Secured(["hasRole('ROLE_ADMIN')"])
+ @Secured(['IS_AUTHENTICATED_FULLY'])
 class PropertyController {
     def propertyService
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
+   
     def index = {
         redirect(action: "list", params: params)
     }
 
+   
     def upload = {
         def photos
         def property = Property.get(params.long('propertyId'))
@@ -27,6 +32,7 @@ class PropertyController {
         }
     }
 
+   
     def removePhoto = {
         def photo = Photo.get(params.long('photoId'))
         if(photo){
@@ -43,6 +49,7 @@ class PropertyController {
         }
     }
 
+   
     def sortPhotos = {
         def photoIds =  params.'item[]'
         def photos = photoIds.collect { Photo.get(it) }
@@ -54,17 +61,20 @@ class PropertyController {
         render ([success: true] as JSON )
     }
 
+   
     def list = {
         params.max = Math.min(params.max ? params.int('max') : 10, 100)
         [propertyInstanceList: Property.list(params), propertyInstanceTotal: Property.count()]
     }
 
+   
     def create = {
         def propertyInstance = new Property()
         propertyInstance.properties = params
         return [propertyInstance: propertyInstance]
     }
 
+   
     def save = {
         def propertyInstance = new Property(params)
         if (propertyInstance.save(flush: true)) {
@@ -79,6 +89,7 @@ class PropertyController {
         }
     }
 
+   
     def show = {
         def propertyInstance = Property.get(params.id)
         if (!propertyInstance) {
@@ -90,6 +101,7 @@ class PropertyController {
         }
     }
 
+   
     def edit = {
         def propertyInstance = Property.get(params.id)
         if (!propertyInstance) {
@@ -101,6 +113,7 @@ class PropertyController {
         }
     }
 
+   
     def update = {
         def propertyInstance = Property.get(params.id)
         if (propertyInstance) {
@@ -131,6 +144,7 @@ class PropertyController {
         }
     }
 
+   
     def delete = {
         def propertyInstance = Property.get(params.id)
         if (propertyInstance) {
