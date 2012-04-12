@@ -25,6 +25,21 @@ class PropertyServiceSpec extends UnitSpec {
             p3.editorChoice
         and:
             !p2.editorChoice
+    }
 
+    def 'A visit to a property is recorded'(){
+        given:
+            def property = new Property(id: 1)
+            mockDomain Property , [property]
+            mockDomain Visit
+
+        when:
+            propertyService.recordVisit(property)
+
+        then:
+            Visit.list().size() == 1
+        and:
+            def visit = Visit.list().first()
+            visit.property.id == property.id
     }
 }

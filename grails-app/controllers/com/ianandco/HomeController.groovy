@@ -1,6 +1,7 @@
 package com.ianandco
 
 class HomeController {
+    def propertyService
 
     def index = {
         def newListing = Property.newListings.list()
@@ -50,6 +51,14 @@ class HomeController {
     }
 
     def propertyDetails = {
+        def property = Property.get(params.long('id'))
+        if(property) {
+            propertyService.recordVisit(property)
+            return [propertyInstance : property]
+        }
+        else {
+            response.sendError(404)
+        }
 
     }
 }

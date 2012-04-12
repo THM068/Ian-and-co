@@ -15,6 +15,13 @@ class PropertyService {
             property.editorChoice = true
             property.save(flush: true)
         }
+    }
+
+    def recordVisit(property) {
+        if(property) {
+            def visit = new Visit(property: property)
+            visit.save()
+        }
 
     }
 }

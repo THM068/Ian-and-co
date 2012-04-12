@@ -16,4 +16,6 @@ databaseChangeLog = {
 	include file: '20120307-add-a-tigerbox.groovy'
 
 	include file: '20120412-added-spring-security-domain-classes.groovy'
+
+	include file: '20120412-added-a-visit-domain-class.groovy'
 }
