@@ -1,5 +1,7 @@
 package com.ianandco
 
+import javax.servlet.http.HttpServletResponse
+
 class HomeController {
     def propertyService
 
@@ -57,7 +59,7 @@ class HomeController {
             return [propertyInstance : property]
         }
         else {
-            response.sendError(404)
+            response.sendError(HttpServletResponse.SC_NOT_FOUND)
         }
 
     }
