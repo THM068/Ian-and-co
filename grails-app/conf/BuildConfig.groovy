@@ -33,6 +33,10 @@ grails.project.dependency.resolution = {
         runtime 'postgresql:postgresql:8.4-702.jdbc3'
         compile 'c3p0:c3p0:0.9.1.2'
 
+        compile('org.codehaus.groovy.modules.http-builder:http-builder:0.5.2') {
+            excludes 'groovy', 'xml-apis'
+        }
+
     }
 
     plugins {
