@@ -40,26 +40,6 @@
             </p>
 
         </div>
-        <div id="new-listings">
-            <p></p>
-            <h2>NEW LISTINGS</h2>
-            <hr>
-            <g:if test="${newListing.size() > 0}">
-                <ul>
-                    <g:each in="${newListing}" var="property">
-                        <li>
-                            <img src="${property?.photos[0]?.fileName}" height="30" height="30">
-                            <div class="new-listing-content">
-                                <p>${property?.title}</p>
-                                <p>Price</p>
-                                <p>Bath room</p>
-                            </div>
-                            <div class="clear"></div>
-                        </li>
-                    </g:each>
-                </ul>
-            </g:if>
-        </div>
         <div id="feature-listing">
             <p></p>
             <h2>FEATURED LISTINGS</h2>

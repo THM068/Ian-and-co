@@ -4,7 +4,7 @@
 
     </g:if>
     <g:else>
-         <img src="https://s3.amazonaws.com/ian-co-images/header_home_img.jpg" height="195" width="281"
+         <img src="http://www.leapfin.co.uk/ianandco/placeholder/placeholder.jpg" height="195" width="281"
          alt="5511 Adeliade Ave."/>
     </g:else>
 
