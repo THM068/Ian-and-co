@@ -113,11 +113,6 @@
 				<input type='submit' id="submit" value='${message(code: "springSecurity.login.button")}'/>
 			</p>
 		</form>
-        <div>
-            <b>User name : admin</b><br/>
-            <b>Password: admin</b><br/>
-            <b>we will change it later</b>
-        </div>
 	</div>
 </div>
 <script type='text/javascript'>
