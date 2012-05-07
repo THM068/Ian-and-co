@@ -32,7 +32,7 @@
         <p class="shortDescription">
             ${property.shortDescription}
         </p>
-        <g:link controller="home" action="propertyDetails" id="${property.id}" class="readMore">Read More</g:link>
+        <g:link controller="home" action="propertyDetails" id="${property.id}" class="readMore">Read More ...</g:link>
 
     </div>
 </div>
