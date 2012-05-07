@@ -1,5 +1,5 @@
 body {
-    color: #777777;
+    color: #7777999;
     font-family: Arial,Helvetica,sans-serif;
 }
 
@@ -251,6 +251,16 @@ body {
     width: 493px;
 }
 
+.shortDescription {
+    margin-left: 20px;
+    width: 500px;
+}
+
+.listinginfo .readMore {
+    color: #852432 ;
+    margin: 5px 0 5px 21px;
+}
+
 .listinginfo .price {
     font-size: 18px;
 }
@@ -361,6 +371,21 @@ a:active {
 a.nextLink, a.prevLink {
     color: navy;
 }
+.contact-us-address {
+    line-height: 10px;
+    color: #fff;
+}
 
+.header {
+     margin-bottom: 5px;
+     color: #fff;
+}
+
+.business-hours {
+    margin-bottom: 20px;
+}
+.working-hrs {
+    line-height: 8px;
+}
 
 

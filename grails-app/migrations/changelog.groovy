@@ -18,4 +18,9 @@ databaseChangeLog = {
 	include file: '20120412-added-spring-security-domain-classes.groovy'
 
 	include file: '20120412-added-a-visit-domain-class.groovy'
+
+
+	include file: '20120507-added-new-fields-to-property.groovy'
+
+	include file: '20120507-added-short-description-to-property.groovy'
 }
