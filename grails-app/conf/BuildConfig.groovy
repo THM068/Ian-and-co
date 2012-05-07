@@ -50,6 +50,9 @@ grails.project.dependency.resolution = {
         compile ":jquery-ui:1.8.15"
         compile ":lesscss:1.0.0"
         compile ":spring-security-core:1.2.7.3"
+        compile ":mail:1.0"
+        compile ":executor:0.3"
+        compile ":email-validator:0.1"
 
 
         test ':build-test-data:1.1.1'

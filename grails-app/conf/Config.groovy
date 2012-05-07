@@ -56,15 +56,20 @@ grails.plugin.databasemigration.updateOnStartFileNames = ['changelog.groovy']
 grails.exceptionresolver.params.exclude = ['password']
 grails.app.context="/ianandco"
 // set per-environment serverURL stem for creating absolute links
+
+grails.ianandco.email="cyian@iwayafrica.co.zw"
 environments {
     production {
+        grails.ianandco.email="cyian@iwayafrica.co.zw"
         grails.serverURL = "http://www.changeme.com"
     }
     development {
+        grails.ianandco.email="thando.mafela@googlemail.com"
         fixtures.enabled = true
         grails.serverURL = "http://localhost:8080"
     }
     test {
+        grails.ianandco.email="thando.mafela@googlemail.com"
         grails.serverURL = "http://localhost:8080/${appName}"
     }
 
@@ -98,3 +103,18 @@ log4j = {
 grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.ianandco.CmsUser'
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.ianandco.CmsUserCmsRole'
 grails.plugins.springsecurity.authority.className = 'com.ianandco.CmsRole'
+
+grails {
+    mail {
+        host = 'email-smtp.us-east-1.amazonaws.com'
+	    port = 25
+        username = 'AKIAJ53KBTLPNN22SFZA'
+	    password = 'AtvePki2TC9kzgNAI4Fcy/1wyVNenURb/njTF79qzeWz'
+        props = [
+                'mail.transport.protocol': 'aws',
+                'mail.aws.class': 'com.amazonaws.services.simpleemail.AWSJavaMailTransport',
+                'mail.aws.user': 'AKIAJ53KBTLPNN22SFZA',
+                'mail.aws.password': 'AtvePki2TC9kzgNAI4Fcy/1wyVNenURb/njTF79qzeWz'
+        ]
+    }
+}

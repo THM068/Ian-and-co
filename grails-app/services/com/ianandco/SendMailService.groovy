@@ -3,18 +3,21 @@ import groovyx.net.http.*
 import grails.converters.JSON
 
 class SendMailService {
+    def mailService
 
-    def getJson() {
-        def http = new HTTPBuilder( 'http://www.leapfin.co.uk')
+    def sendEnquiryEmail(recipient,map) {
+        def vHTML = '/parts/sendEnquiryHTML'
+        def vText = '/parts/sendEnquiryText'
 
-        http.get( path: 'test.json') { resp,json ->
-            println resp.statusLine.statusCode + ' >>>> '
-
-           def response = JSON.parse(json)
-           println response.name
-           println response.age
-           println response.last
-
+        runAsync {
+            mailService.sendMail {
+                multipart true
+                to recipient
+                from map.email
+                subject 'General Enquiry'
+                html(view: vHTML, model: map)
+                text(view: vText, model: map)
+            }
         }
     }
 

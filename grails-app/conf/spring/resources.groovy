@@ -1,4 +1,6 @@
 import com.mchange.v2.c3p0.*
+import org.springframework.mail.MailSender
+import org.springframework.mail.javamail.JavaMailSenderImpl
 
 // Place your Spring DSL code here
 beans = {
@@ -17,7 +19,9 @@ beans = {
             maxIdleTimeExcessConnections = 30 * 60
         }
         println 'I have been called closed'
-
     }
+
+    MailSender mailSender = new JavaMailSenderImpl();
+    mailSender.host = 'https://email.us-east-1.amazonaws.com'
 
 }
