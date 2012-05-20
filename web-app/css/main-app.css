@@ -398,6 +398,14 @@ a.nextLink, a.prevLink {
     width: 660px;
 }
 
+.description .well {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 19px 19px 19px 5px;
+}
+
 
 #property-main {
     margin: 10px 5px;

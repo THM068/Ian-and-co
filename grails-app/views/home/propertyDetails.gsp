@@ -29,6 +29,19 @@
             <h4>Full Description</h4>
             <p>${propertyInstance.description}</p>
 
+            <h3>Contact us </h3>
+             <g:if test="${flash.message !=null}">
+                 <p style="color:green; font-weight: bold">
+                     <g:message code="${flash.message}"/>
+                 </p>
+             </g:if>
+            <g:if test="${flash.error !=null}">
+                <p style="color:red; font-weight: bold">
+                    <g:message code="${flash.error}"/>
+                </p>
+            </g:if>
+            <g:render template="/parts/contactForm" model="[propertyInstance: propertyInstance]"/>
+
         </div>
 
     <div class="property-thumbnails" role="display-property-thumbnails" style="float: left; width: 160px">
@@ -54,6 +67,8 @@
             </ul>
         </div>
         <div class="clear"></div>
+
+
     </div>
 </div>
 <script type="text/javascript" src="http://www.leapfin.co.uk/scripts/jquery.easing-1.3.pack.js"></script>

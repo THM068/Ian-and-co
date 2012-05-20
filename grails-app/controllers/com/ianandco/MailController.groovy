@@ -11,11 +11,12 @@ class MailController {
         def telephone = params.telephone
         def message = params.message
         def name = params.name
+        def property = Property.get(params.long('pId'))
 
         def config = ConfigurationHolder.config
         def recipient = config.grails.ianandco.email
 
-        def map = [email: email, telephone: telephone, message: message, name: name]
+        def map = [email: email, telephone: telephone, message: message, name: name, property: property]
         def isSyntaxValid = emailValidatorService.check(email).syntaxValid
 
         if (isSyntaxValid && email) {
@@ -25,7 +26,13 @@ class MailController {
         else {
             flash.error = 'email.sent.error'
         }
-
-        redirect(controller: 'home', action: 'contactUs')
+        if(params.pId) {
+            println params.id
+            println property?.id
+            redirect(controller: 'home', action: 'propertyDetails',params: [id: property.id])
+        }
+        else {
+            redirect(controller: 'home', action: 'contactUs')
+        }
     }
 }
