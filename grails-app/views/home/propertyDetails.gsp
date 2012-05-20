@@ -54,7 +54,6 @@
             </ul>
         </div>
         <div class="clear"></div>
-    ddd
     </div>
 </div>
 <script type="text/javascript" src="http://www.leapfin.co.uk/scripts/jquery.easing-1.3.pack.js"></script>
