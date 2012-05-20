@@ -234,6 +234,7 @@ body {
     float: right;
     margin: 20px 0 0 23px;
     width: 816px;
+    padding: 0 0 5px 0;
     background: url(../images/search_result_description_bg.jpg) repeat-x bottom;
 }
 
@@ -387,5 +388,50 @@ a.nextLink, a.prevLink {
 .working-hrs {
     line-height: 8px;
 }
+
+/*property details css*/
+#property-main, .description {
+    float: left
+}
+
+.description {
+    width: 660px;
+}
+
+
+#property-main {
+    margin: 10px 5px;
+    width: 830px;
+    background: #f6f6f6;
+}
+
+#property-title {
+    clear: both;
+    height: 40px;
+    background: #F7E0C8;
+    margin-bottom: 10px;
+    font-weight: bold;
+
+}
+
+#property-title p.title {
+    float: left;
+    font-size: 18px;
+    padding: 12px 10px;
+}
+
+#property-title p.price {
+    float:right;
+    height: 40px;
+    width: 120px;
+    background: url("../images/search_bg.jpg");
+    background-repeat: repeat-x;
+    font-size: 16px;
+    padding: 10px 0 0 5px;
+}
+
+.li-label {
+}
+
 
 

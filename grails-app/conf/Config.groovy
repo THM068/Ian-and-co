@@ -57,7 +57,6 @@ grails.exceptionresolver.params.exclude = ['password']
 grails.app.context="/ianandco"
 // set per-environment serverURL stem for creating absolute links
 
-grails.ianandco.email="cyian@iwayafrica.co.zw"
 environments {
     production {
         grails.ianandco.email="cyian@iwayafrica.co.zw"

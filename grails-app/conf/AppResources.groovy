@@ -5,6 +5,7 @@ modules = {
         resource url: 'css/main-app.css'
         resource url: 'js/galleria-1.2.6.min.js'
         resource url: 'js/jquery.validate.js'
+        resource url: 'js/fancybox/jquery.fancybox-1.3.4.css'
     }
 
     'app' {
