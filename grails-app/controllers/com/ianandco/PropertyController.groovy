@@ -79,7 +79,7 @@ class PropertyController {
         def propertyInstance = new Property(params)
         if (propertyInstance.save(flush: true)) {
             if(params.editorChoice) {
-                propertyService.editorsChoice(propertyInstance)
+                //propertyService.editorsChoice(propertyInstance)
             }
             flash.message = "${message(code: 'default.created.message', args: [message(code: 'property.label', default: 'Property'), propertyInstance.id])}"
             redirect(action: "show", id: propertyInstance.id)
@@ -129,7 +129,7 @@ class PropertyController {
             propertyInstance.properties = params
             if (!propertyInstance.hasErrors() && propertyInstance.save(flush: true)) {
                 if(params.editorChoice) {
-                    propertyService.editorsChoice(propertyInstance)
+                   // propertyService.editorsChoice(propertyInstance)
                 }
                 flash.message = "${message(code: 'default.updated.message', args: [message(code: 'property.label', default: 'Property'), propertyInstance.id])}"
                 redirect(action: "show", id: propertyInstance.id)

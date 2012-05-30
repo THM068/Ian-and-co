@@ -1,6 +1,7 @@
 body {
     color: #7777999;
-    font-family: Arial,Helvetica,sans-serif;
+    /*font-family: Arial,Helvetica,sans-serif;*/
+    font-family:"Helvetica Neue",Arial,Helvetica,Geneva,sans-serif
 }
 
 #header #logo {
@@ -139,9 +140,8 @@ body {
 }
 #feature-listing {
     float: left;
-    width: 300px;
+    width: 860px;
     margin-left: 8px;
-
 }
 
 #feature-listing li {
@@ -257,7 +257,7 @@ body {
     width: 500px;
 }
 
-.listinginfo .readMore {
+.listinginfo .readMore, .thumb-readMore {
     color: #852432 ;
     margin: 5px 0 5px 21px;
 }
@@ -439,6 +439,35 @@ a.nextLink, a.prevLink {
 }
 
 .li-label {
+}
+
+.feature-box {
+    width: 350px;
+    height: 300px;
+    border: 1px solid gray;-moz-border-radius:15px 15px;
+    border-radius: 15px;
+    background: none repeat scroll 0 0 #F6F6F6;";
+}
+.thumb-header{
+    text-align: center;
+    background: #cc7145;
+    -moz-border-radius:15px 15px 0 0;
+    border-radius: 15px 15px 0 0;
+}
+.image-thumb {
+    width:150px;
+    height: 100px;
+    margin: 0 auto
+}
+
+.property-detail {
+    margin-top: 50px;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 0 5px;
+}
+.thumb-readmore-link {
+    text-align: right;
 }
 
 

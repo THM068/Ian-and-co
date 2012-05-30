@@ -7,9 +7,11 @@ class HomeController {
 
     def index = {
         def newListing = Property.newListings.list()
-        def editorChoice = Property.findByActiveAndEditorChoice(true,true)
-
-        [ newListing: newListing, editorChoice: editorChoice ]
+        def featuredListings = Property.findAllByActiveAndEditorChoice(true,true)
+        if(featuredListings.size() >= 4) {
+            featuredListings = featuredListings[0..3]
+        }
+        [ newListing: newListing, featuredListings: featuredListings ]
     }
 
     def contactUs = {}

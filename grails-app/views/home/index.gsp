@@ -10,7 +10,7 @@
 
 <body>
     <div id="main-image-container" class="span-12">
-        <div id='home-image'>
+        <div id='home-image' >
             <g:if test="${tigerBox?.photos?.size() > 0}">
                 <g:each in="${tigerBox?.photos}" var="p">
                     <img src="${p}" />
@@ -33,34 +33,68 @@
 
     <div id="home-body">
         <div id="home-welcome">
-            <h5>We offer a full line of Real Estate Services</h5>
+            <h5>Contacts</h5>
+            <address>
+                <h4>Ian and Co</h4>
+                10, Westbourne Suites  <br/>
+                Josiah Tongogara Street<br/>
+                Email  cyian@iwayafrica.co.zw<br/>
+                P.O. Box 2883, Bulawayo, Zimbabwe <br/><br/>
+                <p>
+                    Tel: 886626 or 886256<br/>
+                    Cell: 712871455 or 775306392
+                </p>
+            </address>
 
-            <p>
-                Can you provide the copy of the text to display in this paragraph
-            </p>
 
         </div>
         <div id="feature-listing">
             <p></p>
             <h2>FEATURED LISTINGS</h2>
-            <hr>
-            <g:set var="fileName" value="${editorChoice?.photos ? editorChoice?.photos[0]?.fileName : ''}" />
-            <g:if test="${fileName != '' }">
-                 <ul>
+            <g:each in="${featuredListings}" var="property" >
+                <g:set var="fileName" value="${property?.photos ? property?.photos[0]?.fileName : ''}" />
+                <ul class="thumbnails" style="display: inline-block;">
                     <li>
-                        <img src="${fileName}" width="290" height="150" />
-                        <div id="feature-listing-content">
-                            <p class="top"></p>
-                            <p class="bottom">$789,000
-
-3 Bed, 4 Bath, 4,582 Sq Ft on 0.45 Acres
-
-Property Type: Single Family Home</p>
-
+                        <div class="feature-box" >
+                            <h3 class="thumb-header" >${property.title}</h3>
+                            <p></p>
+                            <div class="image-thumb" >
+                                 <g:link controller="home" action="propertyDetails" id="${property.id}" class="thumbnail" >
+                                    <img src="${fileName}" width="200" height="100"/>
+                                 </g:link>
+                            </div>
+                            <div class="property-detail" >
+                                ${property?.shortDescription}
+                                <p class="thumb-readmore-link">
+                                    <g:link controller="home" action="propertyDetails" id="${property.id}" class="thumb-readMore" style="color:#852432;">
+                                        Read more ..
+                                    </g:link>
+                                </p>
+                            </div>
                         </div>
+
                     </li>
                 </ul>
-            </g:if>
+
+
+            </g:each>
+
+            %{--<g:if test="${fileName != '' }">--}%
+                 %{--<ul>--}%
+                    %{--<li>--}%
+                        %{--<img src="${fileName}" width="290" height="150" />--}%
+                        %{--<div id="feature-listing-content">--}%
+                            %{--<p class="top"></p>--}%
+                            %{--<p class="bottom">$789,000--}%
+
+%{--3 Bed, 4 Bath, 4,582 Sq Ft on 0.45 Acres--}%
+
+%{--Property Type: Single Family Home</p>--}%
+
+                        %{--</div>--}%
+                    %{--</li>--}%
+                %{--</ul>--}%
+            %{--</g:if>--}%
         </div>
     </div>
     <div class="clear"></div>

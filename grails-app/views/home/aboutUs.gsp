@@ -6,7 +6,7 @@
   <body>
   <div id="listingwrap">
       <g:render template="../parts/sidebar"/>
-      <img class="right" src="https://s3.amazonaws.com/ian-co-images/header_home_img.jpg" height="270" width="840"
+      <img class="right" src="${resource(dir:'images', file: 'aboutUs.jpg')}" height="270" width="840"
            alt="Professional Real Estate Services"/>
 
       <div id="listingdetail">
