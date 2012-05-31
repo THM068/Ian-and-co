@@ -149,6 +149,12 @@ class PropertyController {
         def propertyInstance = Property.get(params.id)
         if (propertyInstance) {
             try {
+                //delete all instances of property from the visit table
+                def visits = Visit.findAllByProperty(propertyInstance)
+                visits.each { visit->
+                    visit.delete()
+                }
+
                 propertyInstance.delete(flush: true)
                 flash.message = "${message(code: 'default.deleted.message', args: [message(code: 'property.label', default: 'Property'), params.id])}"
                 redirect(action: "list")
