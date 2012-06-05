@@ -54,7 +54,7 @@ grails.plugin.databasemigration.updateOnStartFileNames = ['changelog.groovy']
 
 // request parameters to mask when logging exceptions
 grails.exceptionresolver.params.exclude = ['password']
-grails.app.context="/"
+grails.app.context="/ianandco"
 // set per-environment serverURL stem for creating absolute links
 
 environments {
