@@ -21,8 +21,11 @@
                 <li ><span class="li-label">Located in ${propertyInstance?.location}</li>
                 <li><span class="li-label">Roof:</span>${propertyInstance?.roofType}</li>
                 <li><span class="li-label">Wall:</span>${propertyInstance?.wallType}</li>
-                <li><span class="li-label">${propertyInstance?.numberOfBedrooms} bedrooms</li>
-                <li><span class="li-label">${propertyInstance?.numberOfBathrooms} bathrooms</li>
+                <g:if test="${propertyInstance?.propertyType == 'Residential' ? 'Residential' : 'Commercial'}">
+                    <li><span class="li-label">${propertyInstance?.numberOfBedrooms} bedrooms</li>
+                    <li><span class="li-label">${propertyInstance?.numberOfBathrooms} bathrooms</li>
+                </g:if>
+
                 <li><span class="li-label">Property size:</span>${propertyInstance?.size} m<sup>2</sup></li>
 
             </ul>
