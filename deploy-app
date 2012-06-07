@@ -1,8 +1,8 @@
 #!/bin/bash
 grails clean
 grails war
-rm -fr /var/lib/tomcat6/webapps/ianandco /var/lib/tomcat6/webapps/ianandco.war
-mv target/ianandco.war   /var/lib/tomcat6/webapps
-mv ianandco.war ROOT.war
+mv target/ianandco.war target/ROOT.war
+rm -fr /var/lib/tomcat6/webapps/ROOT /var/lib/tomcat6/webapps/ROOT.war
+mv target/ROOT.war /var/lib/tomcat6/webapps/
 /etc/init.d/tomcat6 stop
 /etc/init.d/tomcat6 start
