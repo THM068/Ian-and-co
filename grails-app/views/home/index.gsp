@@ -35,7 +35,7 @@
         <div id="home-welcome">
             <h5>Contacts</h5>
             <address>
-                <h4>Ian & Co</h4>
+                <h4>IAN & CO. REAL ESTATE</h4>
                 10, Westbourne Suites  <br/>
                 Josiah Tongogara<br/>
                 Between 8th & 9th Avenue<br/>

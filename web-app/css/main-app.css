@@ -470,5 +470,9 @@ a.nextLink, a.prevLink {
     text-align: right;
 }
 
+#home-welcome address, #home-welcome address p  {
+    font-size: 14px;
+}
+
 
 
