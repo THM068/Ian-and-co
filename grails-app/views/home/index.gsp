@@ -37,12 +37,14 @@
             <address>
                 <h4>Ian and Co</h4>
                 10, Westbourne Suites  <br/>
-                Josiah Tongogara Street<br/>
-                Email  cyian@iwayafrica.co.zw<br/>
-                P.O. Box 2883, Bulawayo, Zimbabwe <br/><br/>
+                Josiah Tongogara<br/>
+                Between 8th & 9th Avenue<br/>
+                Email  <a href="mailto:cyian@iwayafrica.co.zw" style="color:blue">cyian@iwayafrica.co.zw</a><br/>
+                P.O. Box 2883, Bulawayo, Zimbabwe <br/>
+                <br/>
                 <p>
-                    Tel: 886626 or 886256<br/>
-                    Cell: 712871455 or 775306392
+                    Tel: +2639886626 or +2639886256<br/>
+                    Cell: +263712871455 or +263775306392
                 </p>
             </address>
 
