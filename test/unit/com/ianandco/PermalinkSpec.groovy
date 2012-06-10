@@ -12,8 +12,9 @@ class PermalinkSpec extends UnitSpec {
             new Permalink().convertToPermalink(title) == expected
 
         where:
-            title      | expected
-            'cars'     | 'cars'
-            'one word' | 'one-word'
+            title         | expected
+            'cars'        | 'cars'
+            'one word'    | 'one-word'
+            'space word ' | 'space-word'
     }
 }

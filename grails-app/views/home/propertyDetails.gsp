@@ -18,7 +18,7 @@
             <h2>Key features:</h2>
             <ul>
                 <li> A ${propertyInstance?.propertyType == 'Residential' ? 'Residential' : 'Commercial'} property</li>
-                <li ><span class="li-label">Located in ${propertyInstance?.location}</li>
+                <li ><span class="li-label">Located in ${propertyInstance?.location}</span></li>
                 <li><span class="li-label">Roof:</span>${propertyInstance?.roofType}</li>
                 <li><span class="li-label">Wall:</span>${propertyInstance?.wallType}</li>
                 <g:if test="${propertyInstance?.propertyType == 'Residential' ? 'Residential' : 'Commercial'}">
