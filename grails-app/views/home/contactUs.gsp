@@ -27,7 +27,7 @@
     </div>
 
     <div class="span8" style="margin-left: -20px;">
-        <h3>Contact Us</h3>
+        <h2>Contact Us</h2>
         <p>
             You may contact us using the details listed on the left column of the website.
         </p>
