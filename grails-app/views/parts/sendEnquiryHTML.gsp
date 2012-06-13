@@ -8,7 +8,7 @@
       E-mail: ${email}<br/>
       Tel : ${telephone} <br/>
       <g:if test="${property}">
-          Property id: ${property?.id}
+          An enquiry has been made for property: <a href="http://www.ianandco.com/home/propertyDetails/${property?.id}">${property?.title}</a>
       </g:if>
       <p>
       ${message}
