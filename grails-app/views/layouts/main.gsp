@@ -6,6 +6,9 @@
         <r:use modules="main-app" />
         <r:layoutResources />
         <g:layoutHead />
+        <g:if env="production">
+            <g:render template="/parts/trackingCode" />
+        </g:if>
     </head>
     <body>
         <div class="container">
