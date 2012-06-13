@@ -8,10 +8,10 @@
             <li class="${actionName == 'index'? 'active':''}">
                 <g:link uri="/">Home</g:link>
             </li>
-            <li class="${actionName == 'residentialProperties'? 'active':''}">
+            <li class="${actionName == 'residentialProperties' ||request?.propertyType=='Residential'? 'active':''}">
                 <g:link mapping="resProperty">Residential properties</g:link>
             </li>
-            <li class="${actionName == 'commercialProperties'? 'active':''}">
+            <li class="${actionName == 'commercialProperties' || request?.propertyType=='Commercial' ? 'active':''}">
                 <g:link mapping="comProperty" >Commercial properties</g:link>
             </li>
             <li class="${actionName == 'aboutUs'? 'active':''}">

@@ -12,16 +12,17 @@
     <div id="property-main">
          <div id="property-title">
              <p class="title">${propertyInstance?.title}</p>
-             <p class="price" >$${propertyInstance.sellingPrice}</p>
+             <p class="price" >$<g:formatNumber number="${propertyInstance.sellingPrice}" currencyCode="USD" format="###,####,###"/> </p>
          </div>
         <div class="description" role="display-property-details" >
             <h2>Key features:</h2>
             <ul>
                 <li> A ${propertyInstance?.propertyType == 'Residential' ? 'Residential' : 'Commercial'} property</li>
                 <li ><span class="li-label">Located in ${propertyInstance?.location}</span></li>
-                <li><span class="li-label">Roof:</span>${propertyInstance?.roofType}</li>
-                <li><span class="li-label">Wall:</span>${propertyInstance?.wallType}</li>
-                <g:if test="${propertyInstance?.propertyType == 'Residential' ? 'Residential' : 'Commercial'}">
+
+                <g:if test="${propertyInstance?.propertyType == 'Residential'}">
+                    <li><span class="li-label">Roof:</span>${propertyInstance?.roofType}</li>
+                    <li><span class="li-label">Wall:</span>${propertyInstance?.wallType}</li>
                     <li><span class="li-label">${propertyInstance?.numberOfBedrooms} bedrooms</li>
                     <li><span class="li-label">${propertyInstance?.numberOfBathrooms} bathrooms</li>
                 </g:if>

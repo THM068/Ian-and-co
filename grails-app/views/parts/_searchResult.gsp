@@ -16,7 +16,7 @@
             <p class="location">${property?.location}</p>
         </div>
 
-        <p class="price" style="margin-bottom: 5px;">$${property?.sellingPrice}</p>
+        <p class="price" style="margin-bottom: 5px;">$<g:formatNumber number="${property.sellingPrice}" format="###,####,###"/></p>
 
         <p class="mls" style="margin-bottom: 5px; font-size: 14px;">ID #${property?.id}</p>
 

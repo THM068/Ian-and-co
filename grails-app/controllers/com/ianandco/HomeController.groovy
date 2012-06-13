@@ -50,13 +50,13 @@ class HomeController {
             properties = Property.findAllByLocationAndActive(location, true, params)
             propertiesCount = Property.countByLocationAndActive(location,true)
         }
-
         [propertyInstanceList: properties, propertyInstanceTotal: propertiesCount, location: location]
     }
 
     def propertyDetails = {
         def property = Property.get(params.long('id'))
         if(property) {
+            request.propertyType = property.propertyType
             return [propertyInstance : property]
         }
         else {

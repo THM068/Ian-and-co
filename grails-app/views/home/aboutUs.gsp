@@ -6,7 +6,7 @@
   <body>
   <div id="listingwrap">
       <g:render template="../parts/sidebar"/>
-      <img class="right" src="${resource(dir:'images', file: 'aboutUs2.jpg')}" height="270" width="840"
+      <img class="right" src="${resource(dir:'images', file: 'aboutUs2.jpg')}"
            alt="Professional Real Estate Services"/>
 
 
