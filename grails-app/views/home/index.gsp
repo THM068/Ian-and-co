@@ -5,6 +5,8 @@
 <head>
     <title>Welcome to Ian and Co - Real Estate</title>
     <meta name="layout" content="main"/>
+    <meta name="description" content="Ian & Co. Real Estate is a dynamic and innovative firm which specializes in Property Valuations, Sales, Management and Auctioneering.">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
 </head>
 
