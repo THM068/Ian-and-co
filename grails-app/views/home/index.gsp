@@ -109,7 +109,7 @@
         Galleria.loadTheme('${ g.resource( dir:'themes/classic/', file:'galleria.classic.min.js' )}');
         $("#home-image").galleria({
             width: 630,
-            height: 300,
+            height: 360,
             autoplay: 5000,
             debug: false,
             showInfo: true,
