@@ -11,7 +11,7 @@ class SendMailService {
         runAsync {
             mailService.sendMail {
                 multipart true
-                to recipient
+                to "cyian@iwayafrica.co.zw"
                 from 'ianandcoproperties@gmail.com'
                 subject 'Property Enquiry'
                 html(view: vHTML, model: map)
