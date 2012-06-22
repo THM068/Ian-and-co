@@ -9,7 +9,7 @@ class SendMailService {
         def vHTML = '/parts/sendEnquiryHTML'
         def vText = '/parts/sendEnquiryTEXT'
 
-        //runAsync {
+        runAsync {
             mailService.sendMail {
                 multipart true
                 to recipient
@@ -18,7 +18,7 @@ class SendMailService {
                 html(view: vHTML, model: map)
                 text(view: vText, model: map)
             }
-       // }
+        }
 
     }
 
