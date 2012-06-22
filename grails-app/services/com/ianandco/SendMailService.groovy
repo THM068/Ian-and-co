@@ -7,7 +7,7 @@ class SendMailService {
 
     def sendEnquiryEmail(recipient,map) {
         def vHTML = '/parts/sendEnquiryHTML'
-        def vText = '/parts/sendEnquiryText'
+        def vText = '/parts/sendEnquiryTEXT'
 
         //runAsync {
             mailService.sendMail {
