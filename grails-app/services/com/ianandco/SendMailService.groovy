@@ -8,16 +8,18 @@ class SendMailService {
     def sendEnquiryEmail(recipient,map) {
         def vHTML = '/parts/sendEnquiryHTML'
         def vText = '/parts/sendEnquiryText'
-        runAsync {
+
+        //runAsync {
             mailService.sendMail {
                 multipart true
-                to "cyian@iwayafrica.co.zw"
+                to recipient
                 from 'ianandcoproperties@gmail.com'
                 subject 'Property Enquiry'
                 html(view: vHTML, model: map)
                 text(view: vText, model: map)
             }
-        }
+        //}
+
     }
 
 }
