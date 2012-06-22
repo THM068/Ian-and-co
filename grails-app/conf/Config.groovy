@@ -106,6 +106,18 @@ grails.plugins.springsecurity.authority.className = 'com.ianandco.CmsRole'
 grails {
     //configureAWS()
     mail {
+        host = 'in.mailjet.com'
+	    port = 25
+        username = '55d343a242adbc74992392860d59aa90'
+	    password = '59961ae546fba3021d9e0b22977dca67'
+    }
+
+
+}
+
+def configureAWS() {
+
+    mail {
         host = 'email-smtp.us-east-1.amazonaws.com'
 	    port = 25
         username = 'AKIAJ53KBTLPNN22SFZA'
@@ -116,16 +128,6 @@ grails {
                 'mail.aws.user': 'AKIAJ53KBTLPNN22SFZA',
                 'mail.aws.password': 'AtvePki2TC9kzgNAI4Fcy/1wyVNenURb/njTF79qzeWz'
         ]
-    }
-
-}
-
-def configureAWS() {
-    mail {
-        host = 'in.mailjet.com'
-	    port = 25
-        username = '55d343a242adbc74992392860d59aa90'
-	    password = '59961ae546fba3021d9e0b22977dca67'
     }
 
 }
