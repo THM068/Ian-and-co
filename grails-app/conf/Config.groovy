@@ -59,7 +59,7 @@ grails.app.context="/ianandco"
 
 environments {
     production {
-        grails.ianandco.email="cyian@iwayafrica.co.zw"
+        grails.ianandco.email="mail.ianandcoproperties@gmail.com"
         grails.serverURL = "http://http://www.ianandco.com/"
     }
     development {
