@@ -40,7 +40,7 @@
                     });
 
                 }
-                else if(data.errorMessage) {
+                else if(data.fail && data.errorMessage) {
                     $('#errors').empty();
                     $('#errors').append(data.errorMessage);
 

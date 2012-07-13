@@ -3,6 +3,7 @@ package com.ianandco
 import grails.plugin.spock.ControllerSpec
 import grails.plugins.emailvalidator.EmailValidatorService
 
+
 class MailControllerSpec extends ControllerSpec {
     def sendMailService
     def emailValidatorService
@@ -18,7 +19,7 @@ class MailControllerSpec extends ControllerSpec {
 
 
         mockConfig("""
-          grails.ianandco.email = 'someone@email.com'
+            grails.ianandco.email = 'someone@email.com'
         """)
 
     }
@@ -30,7 +31,6 @@ class MailControllerSpec extends ControllerSpec {
             controller.params.message = 'Some crazy message'
         when:
             controller.sendEnquiry()
-
         then:
             1 * sendMailService.sendEnquiryEmail(_,_ as Map)
         and:

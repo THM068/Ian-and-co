@@ -1,10 +1,10 @@
-<g:form controller="property" action="upload">
+<g:uploadForm controller="property" action="upload">
     <div id="photo-field-container">
         <input type="hidden" value="${propertyInstance?.id}" name="propertyId">
-        <input type="text" name='fileName' id="fileNameField" >
-        <input type="submit" value="Submit" id="uploadButton" >
+        <input type="file" name='fileName' id="fileNameField" >
+        <input type="submit" value="Submit"  >
     </div>
-</g:form>
+</g:uploadForm>
 <div id='photoList'>
     <div id='errors'></div>
     <ul id='photoResults'>
