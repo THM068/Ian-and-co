@@ -4,7 +4,7 @@ import grails.converters.JSON
 import grails.plugins.springsecurity.Secured;
 
  //@Secured(["hasRole('ROLE_ADMIN')"])
- @Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_FULLY'])
 class PropertyController {
 
     def photoService
@@ -23,7 +23,6 @@ class PropertyController {
         def photos
         def multipartFile = params.fileName
 
-        println " I am a ${multipartFile} "
         def property = Property.get(params.long('propertyId'))
 
         try {
@@ -35,7 +34,8 @@ class PropertyController {
             return
         }
 
-        def photoList = photoService.addPhotoTo(property, s3FileName)
+        photoService.addPhotoTo(property, s3FileName)
+        flash.message = 'Photos successfully saved.'
         redirect(action: 'edit', id: property.id)
         return
     }
@@ -57,7 +57,6 @@ class PropertyController {
         }
     }
 
-   
     def sortPhotos = {
         def photoIds =  params.'item[]'
         def photos = photoIds.collect { Photo.get(it) }
@@ -152,7 +151,6 @@ class PropertyController {
         }
     }
 
-   
     def delete = {
         def propertyInstance = Property.get(params.id)
         if (propertyInstance) {

@@ -9,6 +9,9 @@ class PhotoService {
     def uploadPhoto(multipartFile, property) {
         String folder = "property/photos/property-${property.id}"
         def fileName = multipartFile.originalFilename
+        if(!fileName) {
+            throw new UploadErrorException()
+        }
         def uploadedFile = multipartFile.inputStream.s3upload(fileName) {
             path folder
        }

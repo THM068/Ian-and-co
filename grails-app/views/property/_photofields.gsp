@@ -2,7 +2,11 @@
     <div id="photo-field-container">
         <input type="hidden" value="${propertyInstance?.id}" name="propertyId">
         <input type="file" name='fileName' id="fileNameField" >
-        <input type="submit" value="Submit"  >
+        <input type="submit" value="Submit" onclick="showSpinner();" >
+        <span id="spinner" style="display: none">
+            <img src="${resource(dir: 'images', file: 'spinner.gif')}" />
+            Loading ....
+        </span>
     </div>
 </g:uploadForm>
 <div id='photoList'>
@@ -16,5 +20,9 @@
         </g:each>
 
     </ul>
-
+    <r:script>
+        function showSpinner() {
+            $('#spinner').show();
+        }
+    </r:script>
 </div>
