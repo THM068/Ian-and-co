@@ -112,6 +112,20 @@ grails {
 	    password = '59961ae546fba3021d9e0b22977dca67'
     }
 
+    plugin {
+    aws {
+        credentials {
+            accessKey = 'AKIAJPDNRQXIQYF27EKQ'
+            secretKey = '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'
+        }
+        s3 {
+            bucket = 'static.ianandco.com'
+            acl = 'public'
+            rrs = true
+        }
+    }
+}
+
 
 }
 
@@ -132,6 +146,3 @@ def configureAWS() {
 
 }
 
-def configureMailJet() {
-
-}

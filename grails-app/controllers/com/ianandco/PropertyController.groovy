@@ -4,8 +4,10 @@ import grails.converters.JSON
 import grails.plugins.springsecurity.Secured;
 
  //@Secured(["hasRole('ROLE_ADMIN')"])
- @Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_FULLY'])
 class PropertyController {
+
+    def photoService
     def propertyService
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
@@ -17,19 +19,25 @@ class PropertyController {
 
    
     def upload = {
+        def s3FileName
         def photos
+        def multipartFile = params.fileName
+
         def property = Property.get(params.long('propertyId'))
-        Photo photo = new Photo(fileName: params.fileName)
-        if(property.addToPhotos(photo).save()) {
-            photos = property.photos.collect { p ->
-                [id: p.id, fileName: p.fileName ]
-            }
-            render([success: true, photos: photos] as JSON)
+
+        try {
+            s3FileName = photoService.uploadPhoto(multipartFile,property)
+        }
+        catch(UploadErrorException e) {
+            flash.error = 'An error occured , the image was not saved to the database'
+            redirect(action: 'edit', id: property.id)
             return
         }
-        else {
-            render( [fail: true, errorMessage: 'An error occured , the image was not saved to the database'] as JSON )
-        }
+
+        photoService.addPhotoTo(property, s3FileName)
+        flash.message = 'Photos successfully saved.'
+        redirect(action: 'edit', id: property.id)
+        return
     }
 
    
@@ -49,7 +57,6 @@ class PropertyController {
         }
     }
 
-   
     def sortPhotos = {
         def photoIds =  params.'item[]'
         def photos = photoIds.collect { Photo.get(it) }
@@ -144,7 +151,6 @@ class PropertyController {
         }
     }
 
-   
     def delete = {
         def propertyInstance = Property.get(params.id)
         if (propertyInstance) {

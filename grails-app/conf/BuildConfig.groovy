@@ -37,6 +37,8 @@ grails.project.dependency.resolution = {
             excludes 'groovy', 'xml-apis'
         }
 
+        compile: 'org.objenesis:objenesis:1.2'
+
     }
 
     plugins {
@@ -53,6 +55,7 @@ grails.project.dependency.resolution = {
         compile ":mail:1.0"
         compile ":executor:0.3"
         compile ":email-validator:0.1"
+        compile ":aws:1.2.12.2"
 
 
         test ':build-test-data:1.1.1'
