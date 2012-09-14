@@ -394,3 +394,23 @@ listing.size
 []      0
 
 	at PropertyIntegrationSpec.Property can return three latest properties(PropertyIntegrationSpec.groovy:17)
+2012-09-11 22:42:58,963 [main] ERROR StackTrace  - Sanitizing stacktrace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+listing*.title.intersect(['magwegwe', 'kilarney', 'makokoba']) == ['magwegwe', 'kilarney', 'makokoba']
+|        |     |                                               |
+|        |     [magwegwe, kilarney]                            false
+|        [luveve, magwegwe, kilarney]
+[com.ianandco.Property : 4, com.ianandco.Property : 5, com.ianandco.Property : 6]
+
+	at PropertyIntegrationSpec.Property can return three latest properties(PropertyIntegrationSpec.groovy:20)
+2012-09-11 22:42:58,983 [main] ERROR StackTrace  - Sanitizing stacktrace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+listing*.title.intersect(['magwegwe', 'kilarney', 'makokoba']) == ['magwegwe', 'kilarney', 'makokoba']
+|        |     |                                               |
+|        |     [magwegwe, kilarney]                            false
+|        [luveve, magwegwe, kilarney]
+[com.ianandco.Property : 4, com.ianandco.Property : 5, com.ianandco.Property : 6]
+
+	at PropertyIntegrationSpec.Property can return three latest properties(PropertyIntegrationSpec.groovy:20)

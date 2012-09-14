@@ -1,0 +1,16 @@
+//run a mysql dump command save dump is a particular location
+// file name should be ianandco_date.sql
+// copy file to ianandco bucket in amazon s3
+task backupDatabase << {
+    backupDatabase()
+}
+
+def backupDatabase() {
+    def now = new Date()
+    def fileName = "ianandco_"+now.toString().replace(' ','_')+".sql"
+    def dbDump = fileName
+
+    def dumpCommand = "mysqldump -u root -pzinzilee ianandco_prod --result-file=/usr/local/database/backups/${fileName}"
+
+    dumpCommand.execute()
+}
