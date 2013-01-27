@@ -80,11 +80,15 @@ log4j = {
     appender:
 
     appenders {
-        rollingFile name: "ianandco.log",
+        rollingFile name: "ianandco",
         file: "/var/log/ianandco.log",
         layout:pattern(conversionPattern: '%c{2} %m%n')
 
         //console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
+    }
+
+    root {
+        error 'stdout', 'ianandco'
     }
 
     error  'org.codehaus.groovy.grails.web.servlet',  //  controllers
