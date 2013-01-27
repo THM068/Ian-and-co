@@ -7,6 +7,7 @@
     <meta name="layout" content="main"/>
     <meta name="description" content="Ian & Co. Real Estate is a dynamic and innovative firm which specializes in Property Valuations, Sales, Management and Auctioneering.">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+    <meta name="keywords" content="Zimbabwe real estate, Zimbabwe property, Ian and company, Ian Dlamini, Zimbabwe property rentals, Bulawayo property, Bulawayo sales, Bulawayo Real estate"/>
 
 </head>
 
